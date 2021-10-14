@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mtb-1 {
+  margin: 10px 0;
+}
+.createNewCourse-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+.createNewCourse-heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.createNewCourse-heading h3 {
+  width: 80%;
+}
+.createNewCourse-inputs-container {
+  border-top: 1px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.createNewCourse-courseName,
+.createNewCourse-intro,
+.createNewCourse-description,
+.createNewCourse-whatyouwilllearn,
+.createNewCourse-uploadImg {
+  width: 80%;
+  margin: 10px 0;
+}
+.createNewCourse-textarea-container textarea {
+  height: 100px;
+}
+.createNewCourse-intro textarea {
+  height: 150px;
+}
+.createNewCourse-description textarea {
+  height: 300px;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 5px 20px;
+  height: 40px;
+  border: none;
+  background-color: rgb(223, 223, 223);
+  border-radius: 15px;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.createNewCourse-uploadImg {
+  background-color: rgb(223, 223, 223);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+}
+.createNewCourse-uploadImg > input {
+  background-color: none;
+  width: 30%;
+  padding: 0;
+  height: 20px;
+  border-radius: 0;
+}
+.createNewCourse-learnAdd-btn,
+.createNewCourse-next-btn {
+  width: 100%;
+  text-align: center;
+}
+.createNewCourse-learnAdd-btn button,
+.createNewCourse-next-btn button {
+  width: 100%;
+  background-color: rgb(185, 185, 185);
+  font-size: 30px;
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.createNewCourse-next-btn button {
+  width: 15%;
+  background-color: #c81c1c;
+  font-size: 13px;
+}

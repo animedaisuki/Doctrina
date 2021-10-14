@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.lec_container {
+    display: flex;
+}
+
+.lec_left {
+    background-color: #2f2f2f;
+    color: white;
+    align-items: center;
+    text-align: center;
+    width: 25vw;
+    height: 120vh;
+}
+
+.lec_left h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.lec_left h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.lec_avatar {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50%;
+}
+
+.lec_split {
+    color: white;
+}
+
+.lec-fa-star {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.lec_right {
+    width: 75vw;
+}
+
+.lec_img_container {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.50)), url(../img/books.jpg);
+    height: 41.5vh;
+    width: 100%;
+}
+
+.lec_select {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 93px;
+    border: 1px solid black;
+    background-color: #F9F7EA;
+}
+
+.lec_select h1 {
+    font-size: 20px;
+    /*padding: 15px 15px;*/
+}
+
+.lec_video {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:3px solid #F9F7EA;
+    cursor: pointer;
+}
+
+.lec_video:hover{
+    border-bottom: 3px solid #ff0000;
+    transition: 0.3s;
+}
+
+
+.lec_pdf {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:3px solid #F9F7EA;
+    cursor: pointer;
+    /* width: 200px;
+    text-align:center;
+    border: 1px solid black; */
+}
+
+.lec_pdf:hover{
+    border-bottom: 3px solid #ff0000;
+    transition: 0.3s;
+}
+
+.lec_feedback {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:3px solid #F9F7EA;
+    cursor: pointer;
+}
+
+.lec_feedback:hover{
+    border-bottom: 3px solid #ff0000;
+    transition: 0.3s;
+}
+
+.lec_qa {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:3px solid #F9F7EA;
+    cursor: pointer;
+}
+
+.lec_qa:hover{
+    border-bottom: 3px solid #ff0000;
+    transition: 0.3s;
+}

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about_us_b_container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.about_us_container {
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: #ff9535;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.about_us_container2 {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_us_details {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about_us_our {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.50)), url(../img/about_us_sea.jpg);
+    padding-top: 8vh;
+    height: 30vh;
+    width: 40vh;
+    color: white;
+    margin: 20px;
+}
+
+.fa-angle-right {
+    font-size: 50px;
+}
+
+.about_us_value {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin: 0 auto;
+    max-width:1200px;
+    color: #ff9535;
+    text-align: center;
+    position: relative;
+    height:800px;
+}
+
+.about_us_paragraph {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    min-height: 120px;
+    width: 100%;
+}
+
+.about_us_p1 {
+    color: black;
+    text-align: left;
+    padding-top: 10px;
+    max-height: 10vh;
+}
+
+.about_us_img {
+    padding-top: 10px;
+}
+
+.about_us_content_c {
+    background-color: rgba(20, 24, 23, 0.2);
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1200px;
+    position:absolute;
+    right:170px;
+    top: 300px;
+}
+
+.about_us_img_c{
+    position: absolute;
+    top: 180px;
+    left:80px;
+    z-index: 1;
+}
+
+.about_us_pc{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}

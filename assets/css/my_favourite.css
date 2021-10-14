@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.My-Favourite-Container {
+  width: 90%;
+  margin: auto;
+  margin-top: 3em;
+  height: 500px;
+}
+.My-favorite-body{
+  height:100vh;
+}
+
+.My-Favourite-box {
+  padding: 0%;
+}
+
+.My-Favourite-table-responsive {
+  /* padding: 0%; */
+  width: 95%;
+  display: block;
+  /* border-bottom: 1px solid black; */
+  margin: auto;
+}
+
+.My-Favourite-table th{
+  /* display:inline-block;   
+  vertical-align: top;    */
+  width: 25%;   
+  /* padding-right: 20px;   
+  box-sizing: border-box;   
+  background-clip: content-box;    */
+  font-size: 16px;  
+  text-align: inherit;
+  height: 30px;
+  border-bottom: 1px solid black;
+}
+
+.My-Favourite-table td{
+  height: 70px;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.My-Favourite-table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0px 13px;
+}
+
+.My-Favourite-Table-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 10px;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.My-Favourite-drop-down,
+.My-Favourite-drop-down2 {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 4px rgb(0 0 0/0.25);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.My-Favourite-drop-down li,
+.My-Favourite-drop-down2 li {
+  padding: 15px 10px;
+  width: 80%;
+  display: inline-block;
+}
+
+.My-Favourite-drop-down {
+  left: 50px;
+  top: 0px;
+}
+
+.My-Favourite-drop-down2 {
+  left: 200px;
+  top: 0px;
+}
+
+.My-Favourite-drop-down div:hover,
+.My-Favourite-drop-down2 div:hover {
+  background-color: rgba(194, 194, 194, 0.479);
+}
+
+.My-Favourite-Table-container:hover .My-Favourite-drop-down {
+  visibility: visible;
+  opacity: 100;
+}
+
+#My-favourite-More{
+  font-size: 20px;
+}
+.My-Favourite-More:hover .My-Favourite-drop-down2 {
+  visibility: visible;
+  opacity: 100;
+}
+
+.My-Favourite-table tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}

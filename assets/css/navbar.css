@@ -1,0 +1,226 @@
+/*Global*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+  height: 30px;
+  transition: 0.4s;
+}
+.navbar-navbar-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+.navbar-navbar-container a:hover {
+  border-bottom: 2px solid #c81c1c;
+}
+.navbar-header {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 0 auto;
+  width: 93%;
+}
+/*Navbar*/
+.navbar-flex-nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  font-size: 15px;
+  width: 100%;
+}
+.navbar-logo-container {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-logo {
+  width: 100%;
+}
+/*major*/
+.navbar-major-container, .navbar-profile-container {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.navbar-profile-container{
+  width: 50px;
+}
+.navbar-major-profile{
+  width: 50px;
+}
+.login-google-picture{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/*icon*/
+.navbar-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px;
+}
+/*searchbar*/
+.navbar-searchbar-container {
+  width: 60%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-searchbar-container input {
+  width: 100%;
+  border-radius: 10px;
+  height: 60%;
+  border: 1px solid black;
+  padding: 2px 10px;
+}
+.navbar-searchbar-container input:focus {
+  outline: none;
+}
+/*navbar*/
+.navbar-navbar-container {
+  display: flex;
+  width: 650px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 90%;
+}
+.about-us{
+  margin-left:20px;
+}
+/*signup*/
+#navbar-signup {
+  border: 1px solid #c81c1c;
+  color: white;
+  background-color: #c81c1c;
+  padding: 5px;
+  height: 30px;
+}
+#navbar-signup:hover {
+  background-color: white;
+  color: #c81c1c;
+}
+#navbar-login {
+  border: 1px solid #c81c1c;
+  color: #c81c1c;
+  padding: 5px;
+  height: 30px;
+  margin-right: 20px;
+}
+#navbar-login:hover {
+  color: white;
+  background-color: #c81c1c;
+}
+
+/*major drop down menu*/
+.navbar-drop-down,
+.navbar-drop-down-profile,
+.navbar-drop-down-small {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 4px rgb(0 0 0/0.25);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 10;
+}
+.navbar-drop-down li,
+.navbar-drop-down-small li,
+.navbar-drop-down-profile li {
+  padding: 15px 10px;
+  width: 80%;
+  display: inline-block;
+}
+.navbar-drop-down {
+  left: 0px;
+  top: 40px;
+}
+.navbar-drop-down-profile{
+  right:0px;
+  top:40px;
+}
+.navbar-drop-down-small {
+  left: 200px;
+  top: 0px;
+}
+.navbar-drop-down div:hover,
+.navbar-drop-down-small div:hover,
+.navbar-drop-down-profile div:hover {
+  background-color: rgba(194, 194, 194, 0.479);
+}
+.navbar-major-container:hover .navbar-drop-down,
+.navbar-profile-container:hover .navbar-drop-down-profile {
+  visibility: visible;
+  opacity: 100;
+}
+.navbar-major-programming:hover .navbar-drop-down-small {
+  visibility: visible;
+  opacity: 100;
+}
+
+/*navbar after signed in*/
+.navbar-navbar-container .navbar-hidden {
+  display: none;
+}
+.navbar-login-signup {
+  display: flex;
+}
+
+.navbar-account-signedin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  font-size: 12px;
+}
+
+.navbar-account-signedin .navbar-account {
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+/*用户登出logout*/
+.navbar-drop-down-profile .login-logout{
+  border-bottom:none;
+  transition: none;
+  font-size: 14px;
+  width: 100%;
+}
+.navbar-drop-down-profile .login-logout:hover{
+  border-bottom:none;
+}
+

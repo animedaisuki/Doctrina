@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.homepage-container {
+  margin: 0px auto;
+  max-width: 1200px;
+  margin-bottom: 50px;
+}
+
+.homepage-head-banner {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.homepage-background-image {
+  background: url('../img/header-banner.png') no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.homepage-description {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  width: 25%;
+  margin-left: 100px;
+  padding: 20px;
+}
+.homepage-description h1 {
+  width: 50%;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.homepage-description p {
+  width: 70%;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgb(85, 84, 84);
+}
+.homepage-description .homepage-description-button {
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  margin-left: 150px;
+}
+.homepage-description .homepage-description-button a {
+  font-size: 12px;
+}
+/*homepage what we offer*/
+.homepage-whatweoffer {
+  width: 100%;
+  margin: 20px 0px;
+}
+.homepage-whatweoffer .homepage-whatweoffer-heading {
+  margin: 20px 0px;
+}
+.homepage-whatweoffer-container {
+  display: flex;
+  justify-content: space-around;
+}
+.homepage-whatweoffer-container .homepage-whatweoffer-item {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homepage-whatweoffer-item img {
+  width: 80%;
+}
+.homepage-whatweoffer-item h3 {
+  font-size: 18px;
+}
+/*most viewed and most download*/
+.homepage-mostviewed,
+.homepage-mostdownload {
+  margin-top: 40px;
+}
+.homepage-mostviewed .homepage-mostviewed-description,
+.homepage-mostdownload .homepage-mostdownload-description {
+  margin-bottom: 20px;
+}
+.homepage-mostviewed-navcontainer {
+  height: 30px;
+  width: 60%;
+}
+.homepage-mostviewed-navcontainer nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.homepage-mostviewed-navcontainer nav ul li {
+  list-style: none;
+  color: grey;
+  cursor: pointer;
+}
+.homepage-mostviewed-navcontainer nav ul .current {
+  color: black;
+}
+.homepage-mostviewed-itemcontainer {
+  border: 1px solid black;
+  padding: 25px;
+}
+.homepage-mostdownload-itemcontainer {
+  padding: 25px;
+}
+.homepage-mostviewed-itemcontainer h3 {
+  margin: 10px 0px;
+}
+.homepage-mostviewed-p {
+  margin: 10px 0px;
+}
+.homepage-mostviewed-explore-button {
+  width: 120px;
+  height: 40px;
+  border: 1px solid rgb(68, 68, 68);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(68, 68, 68);
+  margin: 10px 0px;
+}
+.homepage-mostviewed-eachitem-container,
+.homepage-mostdownload-eachitem-container {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.homepage-mostviewed-eachitem-container .homepage-mostviewed-item,
+.homepage-mostdownload-eachitem-container .homepage-mostdownload-item {
+  width: 20%;
+  overflow: hidden;
+  padding: 10px;
+}
+.homepage-mostviewed-eachitem-container .homepage-mostviewed-item h4,
+.homepage-mostdownload-eachitem-container .homepage-mostdownload-item h4 {
+  font-size: 13px;
+}
+.homepage-mostviewed-eachitem-container .homepage-mostviewed-item p,
+.homepage-mostdownload-eachitem-container .homepage-mostdownload-item p {
+  font-size: 10px;
+}
+.homepage-mostviewed-item .homepage-mostviewed-rating,
+.homepage-mostdownload-item .homepage-mostdownload-rating {
+  color: orange;
+}
+
+/*information*/
+.homepage-information-container {
+  width: 100%;
+}
+.hompage-info-container {
+  display: flex;
+}
+.hompage-info-container img {
+  width: 50%;
+}
+.homepage-infodescription-container {
+  width: 50%;
+}
+.homepage-infodescription-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homepage-infodescription-container h3 {
+  margin: 10px 0;
+}
+.homepage-favorite-teacher {
+  width: 50%;
+}
+.homepage-favorite-teacher h3 {
+  margin: 10px 0;
+}
+.homepage-favorite-teacher .homepage-teacheritem-container {
+  border: 1px solid black;
+  padding: 20px 40px;
+}
+.homepage-teacheritem {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+}
+.homepage-teacheritem img {
+  width: 45px;
+  border-radius: 50%;
+}
+.homepage-teacher-strong {
+  color: #f4522c;
+  font-weight: bold;
+}
+.homepage-teacher-description {
+  display: flex;
+  align-items: center;
+}
+.homepage-teacher-description p {
+  margin-left: 20px;
+}

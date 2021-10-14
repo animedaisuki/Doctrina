@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ol,ul{
+    list-style-type: none;
+}
+a{
+    color: black;
+    text-decoration:none;
+}
+.marjor_container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.marjor_container1 {
+    text-align: center;
+    width: 20%;
+    margin-left: 20px;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+.marjor_container1 h2{
+    text-align: center;
+}
+.major_container4{
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 20%;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.marjor_container3{
+    text-align: center;
+    width: 30%;
+    margin-left: 30px;
+  }
+/* marjor rating */
+.fa-star{
+    color: yellow;
+    text-align: start;
+}
+.fa-fire{
+    color: red;
+    text-align: start;
+}
+.fa-user-circle{
+    color: gray;
+}
+.check-box{
+    margin: 5px 10px 10px 30px;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    width: 60%;
+}
+  
+th, td {
+    padding: 3px;
+    text-align: left;
+    /* border-bottom: 1px solid #ddd; */
+}
+  
+tr:hover {background-color: rgb(243, 184, 187);}
+
+/* marjor images */
+.major_container2{
+    display: flex;
+    width:80%;
+    /* text-align: right; */
+    margin-left: 2px;
+    /* border: 1px solid black; */
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+.major_container2 img{
+    height: 170px;
+    width: 260px;
+    padding: 20px;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+.major_container2 p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.major_images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.major_images .major_star_container{
+    display: flex;
+    justify-content: center;
+}
+.major_icons_container{
+    display: flex;
+
+}
+.major_icons_container p{
+    padding-left: 10px;
+    padding-right: 30px;
+}
+.major_filter{
+    border-radius: 12px;
+    background-color: #e7e7e7; color: black;
+   padding: 5px 5px;
+   /* text-align: center; */
+   text-decoration: none;
+   font-size: 12px;
+   margin: 4px 2px;
+   cursor: pointer;
+}

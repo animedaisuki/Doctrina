@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.detailpage-container {
+  margin: 0 auto;
+  width: 90%;
+}
+.detailpage-header {
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  height: 250px;
+  color: white;
+}
+.detailpage-description {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.detailpage-description .detailpage-small {
+  font-size: 13px;
+}
+.detailpage-description .detailpage-small i {
+  margin-right: 5px;
+}
+.detailpage-img {
+  width: 30%;
+  overflow: hidden;
+}
+.detailpage-buttons {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.detailpage-buttons a {
+  text-decoration: none;
+  color: black;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+}
+.detailpage-buttons .detailpage-addtofavorite {
+  color: white;
+  background-color: #c81c1c;
+}
+
+.detailpage-navbar i {
+  font-size: 10px;
+  margin: 0 5px;
+}
+.detailpage-navbar ul {
+  display: flex;
+}
+.detailpage-navbar li {
+  list-style: none;
+  color: rgb(190, 113, 190);
+}
+.detailpage-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*What you will learn*/
+.detailpage-whatyouwilllearn-container {
+  margin: 20px 0px;
+  width: 100%;
+}
+.detailpage-whatyouwilllearn-container h3 {
+  margin: 10px 0px;
+}
+.detailpage-whatyouwilllearn-items {
+  width: 100%;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.detailpage-whatyouwilllearn-items .detailpage-whatyouwilllearn-item {
+  width: 33%;
+  display: flex;
+  padding: 10px;
+  color: rgb(97, 97, 97);
+}
+.detailpage-whatyouwilllearn-items .detailpage-whatyouwilllearn-item i {
+  margin-right: 10px;
+}
+/*description*/
+.detailpage-itemdescription-container {
+  color: rgb(97, 97, 97);
+  padding: 20px;
+}
+.detailpage-itemdescription-container p {
+  line-height: 30px;
+  font-size: 15px;
+  height: 300px;
+  overflow:hidden;
+}
+.detailpage-showmore-btn {
+  border: none;
+  background: white;
+  color: rgb(190, 113, 190);
+  font-size: 17px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+/*reviews*/
+.detailpage-itemdescription-container .hidden {
+  display: none;
+}
+.detailpage-reviews {
+  margin: 20px 0;
+}
+.detailpage-reviews h3 {
+  margin-bottom: 20px;
+}
+.detailpage-reviews-interactions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.detailpage-reviews-searchbar {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.detailpage-reviews-ratings {
+  width: 20%;
+  border: 1px solid black;
+}
+.detailpage-reviews-ratings select {
+  width: 100%;
+  height: 100%;
+}
+.detailpage-reviews-ratings select {
+  font-size: 17px;
+  color: rgb(97, 97, 97);
+  border: none;
+}
+
+.detailpage-reviews-searchbar input {
+  width: 85%;
+  height: 50px;
+}
+.detailpage-reviews-searchbar button {
+  width: 8%;
+  height: 50px;
+  background: rgb(24, 24, 24);
+  color: white;
+  font-size: 20px;
+  border: none;
+}
+.detailpage-reviews-item-container {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(97, 97, 97, 0.5);
+}
+.detailpage-reviews-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+}
+.detailpage-reviews-item {
+  padding: 0px 20px;
+}
+.detailpage-reviewsitem-rating {
+  color: orange;
+}
+.detailpage-reviews-item h4,
+.detailpage-reviews-item div,
+.detailpage-reviews-item p {
+  line-height: 25px;
+}
+.detailpage-reviews-item p {
+  color: rgb(97, 97, 97);
+}

@@ -1,0 +1,178 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+.MyProfile-body {
+    background-color:#F8F9FB;
+}
+.MyProfile-container {
+    max-width: 1200px;
+    display:flex;
+    margin:10%;
+
+}
+.MyProfile-nav-container {
+    box-shadow: 0 4px 4px rgb(0 0 0/0.25);
+    width:200px;
+    height:30%;
+    background-color: white;
+}
+
+.MyProfile-nav-container nav {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+
+    line-height:50px;
+}
+
+.MyProfile-container nav ul {
+    text-align:left;
+    width:100%;
+}
+
+.MyProfile-container nav ul li {
+    border-bottom:3px solid white;
+    padding-left:20px;
+    list-style:none;
+}
+
+.MyProfile-container nav ul li:hover {
+    cursor:pointer;
+    border-bottom:3px solid rgba(200, 28, 28, 1);
+    transition-duration:0.3s;
+}
+.MyProfile-rightPart-container {
+    margin-left: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    width:80%;
+
+}
+
+.MyProfile-header-container {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width:100%;
+    box-shadow: 0 4px 4px rgb(0 0 0/0.25);
+    height:80px;
+    background-color: white;
+}
+
+.MyProfile-page-header {
+    margin-left:30px;
+    width:35%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100%;
+    border-bottom: 3px solid rgba(200, 28, 28, 1);
+}
+.MyProfile-content-container {
+    margin-top:30px;
+    height:800px;
+    width:100%;
+    box-shadow: 0 4px 4px rgb(0 0 0/0.25);
+    background-color:white;
+}
+.MyProfile-content-container form {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+    height:100%;
+}
+
+.MyProfile-content-container form div:first-child {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.MyProfile-picture {
+    height:80px;
+    width:80px;
+    border-radius:40px;
+    /* background-color: orange; */
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:white;
+    font-size: 2.5rem;
+}
+
+.MyProfile-content-container form div:not(:first-child) {
+    display:flex;
+    height:40px;
+    width:50%;
+    font-size: 1.5rem;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.MyProfile-content-container form div input[type=text] {
+    height:100%;
+    width:60%;
+    border:1px solid #A3A3A4;
+    border-radius: 5px;
+}
+.MyProfile-content-container form div select {
+    height:100%;
+    width:60%;
+    border:1px solid #A3A3A4;
+    border-radius: 5px;
+}
+
+.MyProfile-content-container form div select:focus {
+    outline-color: #A97DFF;
+}
+
+.MyProfile-content-container form div input[type=text]:focus {
+    outline-color: #A97DFF;
+}
+
+ .MyProfile-submit-button-container {
+    /* margin-left:100px;
+    height:50px; */
+    margin-bottom: 2em;
+} 
+
+.MyProfile-content-container form input[type=submit] {
+    height: 50px;
+    width:130px;
+    border:none;
+    text-decoration: none;
+    font-size:16px;
+    color:white;
+    cursor:pointer;
+    background-color: rgba(200, 28, 28, 1);
+    border-radius: 10px;
+    text-align: center;
+    margin:auto;
+}
+
+.MyProfile-content-container form input[type=submit]:hover {
+    opacity: 0.5;
+    color: white;
+}
+
+label{
+    margin-right: 2.9em;
+}
+
+.myprofile-user-email{
+    margin-left: 5.3em;
+}
+/*.MyProfile-checkbox {
+    height:5px;
+    width: 5px; 
+}  */
+
+
+
+

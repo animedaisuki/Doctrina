@@ -1,0 +1,212 @@
+/*Global*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+  
+/*signup*/
+#signup {
+    border: 1px solid #c81c1c;
+    color: white;
+    background-color: #c81c1c;
+    padding: 5px;
+    height: 30px;
+}
+
+#signup:hover {
+    background-color: white;
+    color: #c81c1c;
+}
+
+#login {
+    border: 1px solid #c81c1c;
+    color: #c81c1c;
+    padding: 5px;
+    height: 30px;
+}
+
+#login:hover {
+    color: white;
+    background-color: #c81c1c;
+}
+
+.Signup-errormsg{
+    text-align: center;
+    vertical-align: center;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(252, 115, 115);
+
+}
+
+/* sign up */
+
+.signup-booking{
+    margin-top:5%;
+    margin-bottom:10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding:2em; 
+    /*border: gray 1px solid;*/
+}
+
+.signup-booking > p{
+    margin-left: 80px;
+    font-size: 30px;
+}
+
+hr{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+
+.signup-container{
+    width:100%;
+    max-width: 1200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.signup-input-pack{
+    margin-bottom: 1.5em;
+    width: 80%;
+}
+
+::placeholder{
+    color: black;
+}
+
+input[type=text],input[type=password], input[type=email]{
+    padding: 1em;
+    color: black;
+
+} 
+
+.signup-input-text, .signup-options{
+    border: none;
+    width: 100%;
+    height: 2em;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: black;
+    /* border: 1px solid black; */
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+    opacity: 0.5;
+    padding: 0 1em;
+}
+
+.signup-dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.signup-dot-current{
+    height: 12px;
+    width: 12px;
+    background-color: rgba(200, 28, 28, 1);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.signup-button{
+    background-color: rgba(200, 28, 28, 1); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.signup-button:hover{
+    opacity: 0.5;
+    color: white;
+}
+
+/* Sign up 2 */
+.signup-left-right{
+    display: flex;
+    width: 80%;
+}
+
+.signup-input-text-right, .signup-input-text-left {
+    border: none;
+    width: 95%;
+    height: 2em;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: black;
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.signup-input-text-right{
+    margin-left: 15px;
+}
+
+
+/* Sign up 3 */
+.signup3-left-right{
+    display: flex;
+    width: 88%;
+}
+
+.signup3-input-text-right, .signup3-input-text-left{
+    border: none;
+    width: 80%;
+    height: 2em;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: black;
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    text-align: center;
+}
+
+.signup3-input-text-right:hover, .signup3-input-text-left:hover, .signup3-input-text-left:focus, .signup3-input-text-right:focus{
+    background-color: rgba(55, 55, 55, 1);
+    opacity: 1;
+}
+
+.signup3-input-text-right:hover::placeholder, .signup3-input-text-left:hover::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.signup3-input-text-right:focus::placeholder, .signup3-input-text-left:focus::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.signup3-input-text-right:active, .signup3-input-text-left:active {
+    background-color: rgba(55, 55, 55, 1);
+    opacity: 1;
+}
+
+.signup3-input-text-right:active::placeholder, .signup3-input-text-left:active::placeholder {
+    color: white;
+    opacity: 1;
+} 
+
+
+
+  
