@@ -8,5 +8,6 @@ class About_us extends CI_Controller{
         $this->load->view('template/navbar');
         $this->load->view("about_us");
         $this->load->view('template/footer');
+        //test
     }
 }
