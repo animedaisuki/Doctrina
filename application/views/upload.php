@@ -15,8 +15,8 @@
 
 <body>
 <!-- <i class="fas fa-caret-down"></i> -->
-<input id = "upload-max-week-of-file" value = "<?php echo $max_week; ?>">
-<input  id="upload-cid" value="<?php echo $cid; ?>">
+<input type = "hidden" id = "upload-max-week-of-file" value = "<?php echo $max_week; ?>">
+<input type = "hidden" id="upload-cid" value="<?php echo $cid; ?>">
 <div class='upload-container'>
     <div class='upload-top'>
         <!-- <div class='upload-background-image'></div>  -->
