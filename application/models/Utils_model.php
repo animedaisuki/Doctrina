@@ -24,13 +24,23 @@ class Utils_model extends CI_Model {
     }
 
     function get_max_week_by_cid($cid) {
-        $doc_sql = "SELECT week FROM doc_path WHERE cid = `$cid` ORDER BY week DESC LIMIT 1";
-        $video_sql = "SELECT week FROM video_path WHERE cid = `$cid` ORDER BY week DESC LIMIT 1";
+        $doc_sql = "SELECT week FROM doc_path WHERE cid = '$cid' ORDER BY week DESC LIMIT 1";
+        $video_sql = "SELECT week FROM video_path WHERE cid = '$cid' ORDER BY week DESC LIMIT 1";
         $doc_result = $this->db->query($doc_sql);
         $video_result = $this->db->query($video_sql);
+//        var_dump($video_result->row_array());
+//        var_dump($doc_result->row_array());
+        if ($doc_result->row_array() == null && $video_result->row_array() == null) {
+            return 1;
+        } else if ($doc_result->row_array() != null && $video_result->row_array() == null) {
+            return $doc_result->row_array()['week'];
+        } else if ($doc_result->row_array() == null && $video_result->row_array() != null) {
+            return $video_result->row_array()['week'];
+        }
         if ($doc_result->row_array()['week'] >= $video_result->row_array()['week']) {
             return $doc_result->row_array()['week'];
         }
+
         return $video_result->row_array()['week'];
     }
 

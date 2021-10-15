@@ -15,6 +15,7 @@
 
 <body>
 <!-- <i class="fas fa-caret-down"></i> -->
+<input id = "upload-max-week-of-file" value = "<?php echo $max_week; ?>">
 <input  id="upload-cid" value="<?php echo $cid; ?>">
 <div class='upload-container'>
     <div class='upload-top'>
@@ -172,6 +173,8 @@
 </body>
 <script src="<?php echo base_url(); ?>assets/js/upload.js"></script>
 <script>
+    const max_week = document.querySelector("#upload-max-week-of-file");
+    var max_week_value = max_week.value;
     function generateUUID() {
         var d = new Date().getTime();
         var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -210,6 +213,16 @@
             dropdown.insertBefore(listItem, add);
         }
     });
+    function initialize_week(number) {
+
+        for (let i = 0; i < number ; i++) {
+            let listItem = document.createElement('li');
+            console.log("for loop result: " + weeks);
+            listItem.textContent = `Week ${weeks++}`;
+            dropdown.insertBefore(listItem, add);
+        }
+    }
+    initialize_week(max_week_value);
 
     const uploadFileFeedbackContainer = document.querySelector(".upload-file-feedback-container");
     const uploadVideoFeedbackContainer = document.querySelector(".upload-video-feedback-container");

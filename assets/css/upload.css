@@ -361,7 +361,7 @@ h4 {
     height:50px;
     margin:10px 10px 0px 10px;
     border-radius: 5px;
-    background-image: url('https://2bnumberone.uqcloud.net/demo/assets/img/fileImg.svg');
+    background-image: url('https://localhost/demo/assets/img/fileImg.svg');
     /* background-repeat:no-repeat; */
 	background-size:100% 100%;
 	/* -moz-background-size:100% 100%; */
@@ -373,7 +373,7 @@ h4 {
     width:20px;
     height:20px;
     border-radius: 10px;
-    background-image: url('https://2bnumberone.uqcloud.net/demo/assets/img/xmarker.svg');
+    background-image: url('https://localhost/demo/assets/img/xmarker.svg');
     cursor:pointer;
 }
 .upload-delete-video-button {
@@ -383,7 +383,8 @@ h4 {
     width:20px;
     height:20px;
     border-radius: 10px;
-    background-image: url('https://2bnumberone.uqcloud.net/demo/assets/img/xmarker.svg');
+    /*background-image: url('https://2bnumberone.uqcloud.net/demo/assets/img/xmarker.svg');*/
+    background-image: url('https://localhost/demo/assets/img/xmarker.svg');
     cursor:pointer;
 }
 .upload-file-title {
