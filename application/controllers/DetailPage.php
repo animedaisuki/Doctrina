@@ -9,6 +9,7 @@ class DetailPage extends CI_Controller{
         $cid = $this->input->get('cid');
         $data['course_info'] = $this->Detail_model->get_course_data($cid);
         $data['what_to_Learn'] = $this->Detail_model->get_course_detail($cid);
+        $data['cid'] = $cid;
 		$this->load->view('template/navbar');
         $this->load->view('detailpage', $data);
         $this->load->view('template/footer');
