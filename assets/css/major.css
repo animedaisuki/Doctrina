@@ -74,7 +74,7 @@ tr:hover {background-color: rgb(243, 184, 187);}
 /* marjor images */
 .major_container2{
     display: flex;
-    width:80%;
+    width:100%;
     max-width: 1200px;
     min-height: 80vh;
     flex-wrap: wrap;
@@ -83,8 +83,6 @@ tr:hover {background-color: rgb(243, 184, 187);}
 .major_container2 img{
     height: 170px;
     width: 260px;
-    padding: 20px;
-    margin-top: 20px;
     /* border: 1px solid black; */
 }
 .major_container2 p{
@@ -97,13 +95,9 @@ tr:hover {background-color: rgb(243, 184, 187);}
     align-items: center;
     width: 25%;
 }
-.major_images .major_star_container{
-    display: flex;
-    justify-content: center;
-}
+
 .major_icons_container{
     display: flex;
-
 }
 .major_icons_container p{
     padding-left: 10px;

@@ -345,12 +345,10 @@ h4 {
 .upload-file-feedback-container {
     width:100%;
     height:200px;
-    border:1px solid red;
 }
 .upload-video-feedback-container {
     width:100%;
     height:200px;
-    border:1px solid blue;
 }
 .upload-each-file-outer-container {
     display: inline-block;

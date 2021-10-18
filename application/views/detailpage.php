@@ -44,7 +44,7 @@
                         ';
                     }
                 ?>
-                </div>
+            </div>
         </div>
         <div class="detailpage-itemdescription">
             <h3>Description</h3>
@@ -57,7 +57,7 @@
             </div>
             <button class="detailpage-showmore-btn">Show more</button>
         </div>
-        <div class="detailpage-reviews">
+<!--    <div class="detailpage-reviews">
             <h3>Review</h3>
             <div class="detailpage-reviews-container">
                 <div class="detailpage-reviews-interactions">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+           </div>-->
         </div>
     </div>
     <script>
