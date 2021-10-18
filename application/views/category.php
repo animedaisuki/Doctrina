@@ -10,16 +10,16 @@
 </head>
 <body>
     <div class="marjor_container">
-        <input id="testJson" value = '<?php echo $courses; ?>'>
-        <input id="test" value = '<?php echo $field;?>'>
+        <input id="testJson" value = '<?php echo $courses; ?>' style="display:none;">
+        <input id="test" value = '<?php echo $field;?>' style="display:none;">
         <h1>JAVA</h1>
         <!-- Major-picture -->
         <div class="major_container2">
+<!--
+            <a class="major_images">
 
-            <div class="major_images">
-                <a>
-                    <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
-                </a>
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
+
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -27,8 +27,8 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-            </div>
-<!--
+            </a>
+
             <div class="major_images">
                 <img src="<?php echo base_url(); ?>assets/img/major-pexels2.jpg" alt="major image">  
                 <div class="major_icons_container">
@@ -242,19 +242,18 @@
     var json = JSON.parse(testJson.value);
     console.log(json);
     for(let i = 0; i<json.length; i++){
-        let course = document.createElement("div");
-        course.classList.add("major_images");
+        let course = document.createElement("a");
         let id = parseInt(json[i].cid);
+        course.classList.add("major_images");
+        course.href = `DetailPage?cid=${id}`
         course.innerHTML =
         `
-            <a href ="DetailPage?cid=${id}">
-                <img src="${json[i].course_img_path}" alt="major image">
-            </a>
+            <img src="${json[i].course_img_path}" alt="major image">
             <div class="major_icons_container">
                 <i class="far fa-user-circle"></i>
                 <p>${json[i].username}</p>
                 <i class="fas fa-fire"></i>
-                <p>520</p>
+                <p>${json[i].favourite_number}</p>
             </div>
             <p>${json[i].course_name}</p>
         `
