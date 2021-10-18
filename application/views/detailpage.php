@@ -15,7 +15,7 @@
                 
                 <h2><?php echo $course_info->row_array()['course_name']; ?></h2>
                 <p><?php echo $course_info->row_array()['intro']; ?></p>
-                <p style="display:none" class="course-id"><?php echo $course_info->row_array()['course_id']; ?></td>
+                <p style="display:none" class="course-id"><?php echo $course_info->row_array()['course_id']; ?></p></td>
                 <p><?php echo $course_info->row_array()['username']; ?></p>
                 <p class="detailpage-small"><i class="fas fa-globe"></i>English</p>
                 <p class="detailpage-small"><?php echo $course_info->row_array()['upload_date']; ?></p>
