@@ -29,38 +29,44 @@
             <form action="#" method="post">
                 <div>
                     <div class="MyProfile-picture"><img src="<?php echo $picture; ?>" alt="user-picture"style="width:100%; height = 100%; border-radius:50%"></div>
-                    <p><?php echo $username;?></p>
                 </div>
-                <div>
+                <div id="username">
                     <p>Username</p>
-                    <input id="MyProfile-new-username" type="text" name="username">
+                    <p><?php echo $username;?></p>
+                    <!-- <input id="MyProfile-new-username" type="text" name="username"> -->
                 </div>
-				<div id="MyProfile-feedback" style="display:flex;justify-content: center;align-items: center"><div style="transition:0.2s;opacity:0;display: flex;flex-direction: row;width:50%"><i class="far fa-check-circle"></i>Success</div></div>
-
-				<div>
+				<div id="institution">
                     <p>Institution</p>
-                    <select id="MyProfile-Institution">
+                    <?php echo $institution;?>
+                <!--    <select id="MyProfile-Institution">
                         <option value="UQ">University of QueensLand</option>
                         <option value="Griffith">Griffith</option>
                         <option value="UQ">University of QueensLand</option>
                         <option value="UQ">University of QueensLand</option>
                     </select>
+                    -->
                 </div>
-                <div>
+                <div id="major">
                     <p>Major</p>
+                    <?php echo $major;?>
+<!--
                     <select id="MyProfile-Major">
                         <option value="IT">Information Tec</option>
                         <option value="ID">Interaction Design</option>
                         <option value="UQ">University of QueensLand</option>
                         <option value="UQ">University of QueensLand</option>
                     </select>
+                    -->
                 </div>
-                <div>
+                <div id="gender">
                     <p>Gender</p>
+                    <?php echo $gender;?>
+                    <!--
 					<label for="Gender">
 						<input class="MyProfile-checkbox" name= "Gender" type="radio" value="Male">&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;
 						<input class="MyProfile-checkbox" name = "Gender" type="radio" value="Female">&nbsp;Female
 					</label>
+					-->
                 </div>
                 <div>
                     <p>Email</p>
@@ -68,7 +74,7 @@
                 </div>
 				<div id="MyProfile-overall-feedback" style="display:flex;justify-content: center;align-items: center"><div style="color:white;transition:0.2s;opacity:0;display: flex;flex-direction: row;width:50%"><i class="far fa-check-circle"></i>success</div></div>
                 <div class="MyProfile-submit-button-container">
-                    <input id="MyProfile-submit-button" type="submit" value="Save">
+                    <input id="MyProfile-submit-button" type="submit" value="Edit">
                 </div>
             </form>
         </div>
@@ -78,45 +84,111 @@
 <script>
 	const submit = document.querySelector('#MyProfile-submit-button');
 	const input = document.querySelector('#MyProfile-new-username');
-	submit.addEventListener('click', function(e){
-		e.preventDefault();
-		const newUsername = document.querySelector('#MyProfile-new-username').value;
-		const institution = document.querySelector('#MyProfile-Institution').value;
-		const major = document.querySelector('#MyProfile-Major').value;
-		const radio = document.getElementsByName("Gender");
-		for (i=0; i<radio.length; i++) {
-			if (radio[i].checked) {
-				var gender = radio[i].value;
+	const edit = document.querySelector("#MyProfile-submit-button");
+// 	submit.addEventListener('click', function(e){
+// 		e.preventDefault();
+// 		const newUsername = document.querySelector('#MyProfile-new-username').value;
+// 		const institution = document.querySelector('#MyProfile-Institution').value;
+// 		const major = document.querySelector('#MyProfile-Major').value;
+// 		const radio = document.getElementsByName("Gender");
+// 		for (i=0; i<radio.length; i++) {
+// 			if (radio[i].checked) {
+// 				var gender = radio[i].value;
+//
+// 			}
+// 		}
+// 		$.ajax({
+// 			url:"<?php echo base_url(); ?>My_profile/change_information",
+// 			method:"POST",
+// 			data:{newUsername:newUsername,institution:institution,major:major,gender:gender},
+// 			datatype:'json',
+// 			success:function(response) {
+// 				var response = JSON.parse(response);
+// 				if (response.repeated == "1") {
+// 					const feedback = document.querySelector('#MyProfile-feedback div')
+// 					feedback.style.opacity = "100";
+// 					feedback.style.color = "red";
+// 					feedback.innerHTML = '<i class="fas fa-times"></i>Username Existed'
+// 					setTimeout(function(){
+// 						feedback.style.opacity = "0";
+// 					},2000);
+// 				} else {
+// 					input.disabled = true;
+// 					const feedback = document.querySelector('#MyProfile-overall-feedback div')
+// 					feedback.style.opacity = "100";
+// 					feedback.style.color = "#309d05";
+// 					setTimeout(function(){
+// 						feedback.style.opacity = "0";
+// 					},2000);
+// 				}
+// 			}
+// 		})
+//
+// 	})
+	edit.addEventListener("click", function(e){
+	    e.preventDefault();
+	    if(edit.value!="save"){
+	        edit.value = "save";
+            const institution = document.querySelector("#institution");
+            const major = document.querySelector("#major");
+            const gender = document.querySelector("#gender");
 
-			}
-		}
-		$.ajax({
-			url:"<?php echo base_url(); ?>My_profile/change_information",
-			method:"POST",
-			data:{newUsername:newUsername,institution:institution,major:major,gender:gender},
-			datatype:'json',
-			success:function(response) {
-				var response = JSON.parse(response);
-				if (response.repeated == "1") {
-					const feedback = document.querySelector('#MyProfile-feedback div')
-					feedback.style.opacity = "100";
-					feedback.style.color = "red";
-					feedback.innerHTML = '<i class="fas fa-times"></i>Username Existed'
-					setTimeout(function(){
-						feedback.style.opacity = "0";
-					},2000);
-				} else {
-					input.disabled = true;
-					const feedback = document.querySelector('#MyProfile-overall-feedback div')
-					feedback.style.opacity = "100";
-					feedback.style.color = "#309d05";
-					setTimeout(function(){
-						feedback.style.opacity = "0";
-					},2000);
-				}
-			}
-		})
+            institution.innerHTML = `
+            <p>Institution</p>
+            <select id="MyProfile-Institution">
+                <option value="UQ">University of QueensLand</option>
+                <option value="Griffith">Griffith</option>
+                <option value="UQ">University of QueensLand</option>
+                <option value="UQ">University of QueensLand</option>
+            </select>
+            `
+            major.innerHTML = `
+            <p>Major</p>
+            <select id="MyProfile-Major">
+                <option value="IT">Information Tec</option>
+                <option value="ID">Interaction Design</option>
+                <option value="UQ">University of QueensLand</option>
+                <option value="UQ">University of QueensLand</option>
+            </select>
+            `
+            gender.innerHTML = `
+            <p>Gender</p>
+            <label for="Gender">
+                <input class="MyProfile-checkbox" name= "Gender" type="radio" value="Male">&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="MyProfile-checkbox" name = "Gender" type="radio" value="Female">&nbsp;Female
+            </label>
+            `
+	    }else{
+	        const newUsername = document.querySelector('#MyProfile-new-username').value;
+            const institution = document.querySelector('#MyProfile-Institution').value;
+            const major = document.querySelector('#MyProfile-Major').value;
+            const radio = document.getElementsByName("Gender");
+            for (i=0; i<radio.length; i++) {
+                if (radio[i].checked) {
+                    var gender = radio[i].value;
 
+                }
+            }
+            $.ajax({
+                url:"<?php echo base_url(); ?>My_profile/change_information",
+                method:"POST",
+                data:{newUsername:newUsername,institution:institution,major:major,gender:gender},
+                datatype:'json',
+                success:function(response) {
+                    var response = JSON.parse(response);
+                    if (response.repeated == "1") {
+                        const feedback = document.querySelector('#MyProfile-feedback div')
+                    } else {
+                        input.disabled = true;
+                        const feedback = document.querySelector('#MyProfile-overall-feedback div')
+                    }
+                }
+            })
+
+	    }
 	})
+
+
+
 </script>
 </html>
