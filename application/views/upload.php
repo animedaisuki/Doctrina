@@ -323,14 +323,14 @@
     //listen drop event
     var uuid;
     var currentWeek;
-    myDropzone_file.on("drop",function(file){
+    myDropzone_file.on("addedfile",function(file){
         var weekTitle = document.querySelector(".upload-week1");
         uuid = generateUUID();
         currentWeek = weekTitle.textContent.slice(5);
         myDropzone_file.options.url = `<?php echo base_url(); ?>Upload/upload_files?week=${currentWeek.trim()}&uuid=${uuid}`;
         console.log("drop:" + uuid);
     })
-    myDropzone_video.on("drop",function(file){
+    myDropzone_video.on("addedfile",function(file){
         var weekTitle = document.querySelector(".upload-week1");
         uuid = generateUUID();
         currentWeek = weekTitle.textContent.slice(5);
