@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/detailpage.css">
     <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 </head>
+<input value="<?php echo $cid ?>">
 <body>
     <div class="detailpage-container">
         <div class="detailpage-header">
@@ -24,7 +25,7 @@
                 <img src="<?php echo $course_info->row_array()['course_img_path']; ?>" alt="">
             </div>
             <div class="detailpage-buttons">
-                <div><a href="">Start Learning</a></div>
+                <div><a href="<?php echo base_url(); ?>Lecture?cid=<?php echo $cid; ?>">Start Learning</a></div>
                 <div><a href="">Download</a></div>
                 <div><a href="<?php echo base_url(); ?>DetailPage/Add_favourite_course" class="detailpage-addtofavorite">Add to favorite</a></div>
             </div>
