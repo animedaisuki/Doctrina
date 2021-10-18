@@ -128,10 +128,12 @@
         if(e.target.classList.contains("delete-favourite-course")){
             const courseid = document.querySelector(".favourite-course-id");
             e.preventDefault();
+            let id = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.children[1].textContent;
             e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
+
             $.ajax({
-                url: `<?php echo base_url()?>DetailPage/delete_favourite_course?cid=${courseid.textContent}`,
-                method: 'POST',
+                url: `<?php echo base_url()?>DetailPage/delete_favourite_course?cid=${id}`,
+                method: 'GET',
                 success: function (response) {
                     alert("Successfully deleted!")
                 }
@@ -139,10 +141,11 @@
         }else if (e.target.classList.contains("my_upload_delete")){
             const courseid = document.querySelector(".course-id");
             e.preventDefault();
+            let id = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.children[1].textContent;
             e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
             $.ajax({
-                url: `<?php echo base_url()?>DetailPage/delete_course?cid=${courseid.textContent}`,
-                method: 'POST',
+                url: `<?php echo base_url()?>DetailPage/delete_course?cid=${id}`,
+                method: 'GET',
                 success: function (response) {
                     alert("Successfully deleted!")
                 }
