@@ -60,8 +60,8 @@ class User_Profile extends CI_Model {
 		return false;
 	}
 
-	public function update_information($username,$newUsername,$institution,$major,$gender) {
-		$sql = "UPDATE user SET username = '$newUsername',Institution = '$institution',Major = '$major',gender = '$gender' WHERE username = '$username'";
+	public function update_information($username,$institution,$major,$gender) {
+		$sql = "UPDATE user SET Institution = '$institution',Major = '$major',gender = '$gender' WHERE username = '$username'";
 		$this->db->query($sql);
 	}
 
