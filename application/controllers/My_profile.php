@@ -3,24 +3,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class My_profile extends CI_Controller {
 	function index() {
-		if($this->session->userdata('username')){
-			$this->load->model('User_Profile');
-			$email = $this->User_Profile->get_email_by_username($this->session->userdata('username'));
-			$data = array(
-				'email' => "Email not verified",
-				'username'=> $this->session->userdata('username'),
-				'picture' => $this->session->userdata('picture')
-			);
-			if($email != "") {
-				$data['email'] = $email;
-			}
-        	$this->load->view('template/navbar');
-			$this->load->view('accountSetting/my_profile', $data);
-        	$this->load->view('template/footer');
-		} else {
-			redirect('/login');
-		}
-	}
+        if($this->session->userdata('username')){
+            $this->load->model('User_Profile');
+            $email = $this->User_Profile->get_email_by_username($this->session->userdata('username'));
+            $list = $this->User_Profile->get_user_data($this->session->userdata('username'));
+            $data = array(
+                'email' => "Email not verified",
+                'username'=> $this->session->userdata('username'),
+                'institution' => $list->row_array()['Institution'],
+                'gender' => $list->row_array()['Gender'],
+                'major' => $list->row_array()['Major'],
+                'picture' => $this->session->userdata('picture')
+            );
+            if($email != "") {
+                $data['email'] = $email;
+            }
+            $this->load->view('template/navbar');
+            $this->load->view('accountSetting/my_profile', $data);
+            $this->load->view('template/footer');
+        } else {
+            redirect('/login');
+        }
+    }
 
 	function change_information() {
 		$username = $this->session->userdata('username');

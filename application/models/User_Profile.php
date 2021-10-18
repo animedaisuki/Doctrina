@@ -65,6 +65,11 @@ class User_Profile extends CI_Model {
 		$this->db->query($sql);
 	}
 
+	public function get_user_data($username) {
+        $query = $this->db->query("SELECT Institution, Major, gender FROM user WHERE username = '$username'");
+        return $query;
+    }
+
 }
 
 ?>

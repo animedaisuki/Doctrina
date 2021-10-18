@@ -39,15 +39,12 @@
                                 <input id="AccountSetting-repeatPW" name="repeatPW">
                             </div>
 							<div id="AccountSetting-feedback"><i class="far fa-check-circle"></i>success</div>
-                        </div>
-                        <p>VIP Status</p>
-                        <div class="AccountSetting-img-container">
-                            <img class="AccountSetting-img1" src="<?php echo base_url()?>assets/img/vip.png" alt="logo">
-                            <div class="AccountSetting-text-container">
-                                <p>VIP Remaining: xx days</p>
-                                <a href="">Activate and Renewal Premium Account</a>
+							<div class="AccountSetting-button-container">
+                                <input class="AccountSetting-button"type="submit" value="Done">
                             </div>
                         </div>
+
+
                         <p>Account Status</p>
                         <div class="AccountSetting-img-container">
                             <img class="AccountSetting-img2" src="<?php echo base_url()?>assets/img/email.png" alt="logo">
@@ -58,9 +55,7 @@
 								<div id="AccountSetting-Email-feedback"><i class="far fa-check-circle"></i>Success</div>
                             </div>
                         </div>
-                        <div class="AccountSetting-button-container">
-                            <input class="AccountSetting-button"type="submit" value="Done">
-                        </div>
+
 				<?php echo form_close(); ?>
             </div>
         </div>
