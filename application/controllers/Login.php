@@ -154,7 +154,7 @@ class Login extends CI_Controller{
         $this->session->unset_userdata('login');
 
         // Destroy entire session data
-//		$this->session->sess_destroy();
+		$this->session->sess_destroy();
 
         // Redirect to login page
         redirect('/login/');
