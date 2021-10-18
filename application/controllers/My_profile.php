@@ -11,7 +11,7 @@ class My_profile extends CI_Controller {
                 'email' => "Email not verified",
                 'username'=> $this->session->userdata('username'),
                 'institution' => $list->row_array()['Institution'],
-                'gender' => $list->row_array()['Gender'],
+                'gender' => $list->row_array()['gender'],
                 'major' => $list->row_array()['Major'],
                 'picture' => $this->session->userdata('picture')
             );
@@ -29,17 +29,17 @@ class My_profile extends CI_Controller {
 	function change_information() {
 		$username = $this->session->userdata('username');
 		$this->load->model('User_Profile');
-		$newUsername = $this->input->post('newUsername');
+// 		$newUsername = $this->input->post('newUsername');
 		$institution = $this->input->post('institution');
 		$major = $this->input->post('major');
 		$gender = $this->input->post('gender');
 		$feedback = array("repeated" => "0");
-		if($this->User_Profile->username_repeated($newUsername)) {
-			$feedback = array("repeated" => "1");
-			echo Json_encode($feedback);
-			exit();
-		}
-		$this->User_Profile->update_information($username,$newUsername,$institution,$major,$gender);
+// 		if($this->User_Profile->username_repeated($newUsername)) {
+// 			$feedback = array("repeated" => "1");
+// 			echo Json_encode($feedback);
+// 			exit();
+// 		}
+		$this->User_Profile->update_information($username,$institution,$major,$gender);
 		echo Json_encode($feedback);
 	}
 }

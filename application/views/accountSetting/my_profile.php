@@ -136,19 +136,18 @@
             institution.innerHTML = `
             <p>Institution</p>
             <select id="MyProfile-Institution">
-                <option value="UQ">University of QueensLand</option>
+                <option value="University of Queensland">University of Queensland</option>
                 <option value="Griffith">Griffith</option>
-                <option value="UQ">University of QueensLand</option>
-                <option value="UQ">University of QueensLand</option>
+                <option value="QUT">Queensland university of technology</option>
+                <option value="Bond University">Bond University</option>
             </select>
             `
             major.innerHTML = `
             <p>Major</p>
             <select id="MyProfile-Major">
-                <option value="IT">Information Tec</option>
-                <option value="ID">Interaction Design</option>
-                <option value="UQ">University of QueensLand</option>
-                <option value="UQ">University of QueensLand</option>
+                <option value="Information Tec">Information Tec</option>
+                <option value="Interaction Design">Interaction Design</option>
+
             </select>
             `
             gender.innerHTML = `
@@ -159,7 +158,6 @@
             </label>
             `
 	    }else{
-	        const newUsername = document.querySelector('#MyProfile-new-username').value;
             const institution = document.querySelector('#MyProfile-Institution').value;
             const major = document.querySelector('#MyProfile-Major').value;
             const radio = document.getElementsByName("Gender");
@@ -172,7 +170,7 @@
             $.ajax({
                 url:"<?php echo base_url(); ?>My_profile/change_information",
                 method:"POST",
-                data:{newUsername:newUsername,institution:institution,major:major,gender:gender},
+                data:{institution:institution,major:major,gender:gender},
                 datatype:'json',
                 success:function(response) {
                     var response = JSON.parse(response);
@@ -184,6 +182,8 @@
                     }
                 }
             })
+            window.location.reload();
+
 
 	    }
 	})
