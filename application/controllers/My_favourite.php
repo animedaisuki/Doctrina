@@ -6,7 +6,6 @@ class My_favourite extends CI_Controller
     {
         $this->load->model('list_model');
         $data['list'] = $this->list_model->fetch_favourite_data($_SESSION['username']);
-        var_dump($data['list']);
         $data['title'] = 'favourite';
         $this->load->view('template/navbar');
         $this->load->view('accountSetting/my_favourite', $data);

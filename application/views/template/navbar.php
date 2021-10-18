@@ -92,7 +92,7 @@
                                 <li class="navbar-major-art"><a class="login-logout" href="<?php echo base_url(); ?>login/logout">Log out</a></li>
                             </div>
                             <div>
-                                <li class="navbar-major-math" ><a href="<?php echo base_url(); ?>AccountSetting" class="login-logout">My profiles</a></li>
+                                <li class="navbar-major-math" ><a href="<?php echo base_url(); ?>My_profile" class="login-logout">My profiles</a></li>
                             </div>
                         </ul>
                         <!-- </div> -->

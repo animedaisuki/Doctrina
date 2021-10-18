@@ -13,8 +13,10 @@
     <div class="AccountSetting-nav-container">
         <nav>
             <ul>
-            <li><i class="fas fa-address-card" style="font-size:1rem"></i>&nbsp;&nbsp;&nbsp;<a style="text-decoration:none; color:black" href="<?php echo site_url('My_profile'); ?>">Personal Data</a></li>
-            <li><i class="fas fa-sliders-h"></i>&nbsp;&nbsp;&nbsp;<a style="text-decoration:none; color:black" href="<?php echo base_url(); ?>AccountSetting">Account Setting</a></li>
+                <li><i class="fas fa-address-card" style="font-size:1rem"></i>&nbsp;&nbsp;&nbsp;<a style="text-decoration:none; color:black" href="<?php echo site_url('My_profile'); ?>">Personal Data</a></li>
+                <?php if(!$this->session->userdata('google_login')) : ?>
+                <li><i class="fas fa-sliders-h"></i>&nbsp;&nbsp;&nbsp;<a style="text-decoration:none; color:black" href="<?php echo base_url(); ?>AccountSetting">Account Setting</a></li>
+                <?php endif; ?>
                 <li><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;&nbsp;<a style="text-decoration:none; color:black" href="<?php echo base_url(); ?>my_favourite">My Favourite</a></li>
                 <li><i class="fas fa-file-upload"></i>&nbsp;&nbsp;&nbsp;<a style="text-decoration:none; color:black" href="<?php echo base_url(); ?>my_upload"> My Upload</a></li>
             </ul>
