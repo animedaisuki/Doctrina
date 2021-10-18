@@ -179,14 +179,12 @@
                     if (response.repeated == "1") {
                         const feedback = document.querySelector('#MyProfile-feedback div')
                     } else {
-                        input.disabled = true;
                         const feedback = document.querySelector('#MyProfile-overall-feedback div')
                     }
                 }
             })
+            alert("Successfully saved");
             window.location.reload();
-
-
 	    }
 	})
 
