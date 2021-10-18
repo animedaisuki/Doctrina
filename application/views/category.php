@@ -12,7 +12,7 @@
     <div class="marjor_container">
         <input id="testJson" value = '<?php echo $courses; ?>' style="display:none;">
         <input id="test" value = '<?php echo $field;?>' style="display:none;">
-        <h1>JAVA</h1>
+        <h1><?php echo $field;?></h1>
         <!-- Major-picture -->
         <div class="major_container2">
 <!--
