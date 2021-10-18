@@ -16,6 +16,9 @@ a{
     text-align: center;
     width: 100%;
     /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .marjor_container1 {
     text-align: center;
@@ -72,11 +75,10 @@ tr:hover {background-color: rgb(243, 184, 187);}
 .major_container2{
     display: flex;
     width:80%;
-    /* text-align: right; */
-    margin-left: 2px;
-    /* border: 1px solid black; */
     max-width: 1200px;
+    min-height: 80vh;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 .major_container2 img{
     height: 170px;
@@ -93,6 +95,7 @@ tr:hover {background-color: rgb(243, 184, 187);}
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 25%;
 }
 .major_images .major_star_container{
     display: flex;
