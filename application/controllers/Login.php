@@ -41,7 +41,8 @@ class Login extends CI_Controller{
                     // 'username' => $userData['oauth_uid'],
                     'username' => $userData['oauth_uid'],
                     'login' => true, //create session variable
-                    'picture' => $userData['picture']
+                    'picture' => $userData['picture'],
+                    'google_login' => true
                 );
                 $this->session->set_userdata($user_data);
                 // Redirect to profile page
