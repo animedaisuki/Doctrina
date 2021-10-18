@@ -13,6 +13,8 @@ class Category extends CI_Controller {
         }
         $data['courses'] = json_encode($data['courses']);
         $data['field'] = $major;
+        $this->load->view('template/navbar');
         $this->load->view('category.php',$data);
+        $this->load->view('template/footer');
     }
 }
