@@ -16,9 +16,10 @@ a{
     text-align: center;
     width: 100%;
     /* border: 1px solid black; */
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 80vh;
+
 }
 .marjor_container1 {
     text-align: center;
@@ -76,13 +77,15 @@ tr:hover {background-color: rgb(243, 184, 187);}
     display: flex;
     width:100%;
     max-width: 1200px;
-    min-height: 80vh;
     flex-wrap: wrap;
     margin-bottom: 50px;
+    align-items: flex-start;
 }
 .major_container2 img{
     height: 170px;
     width: 260px;
+    padding: 20px;
+    margin-top: 20px;
     /* border: 1px solid black; */
 }
 .major_container2 p{
@@ -95,9 +98,13 @@ tr:hover {background-color: rgb(243, 184, 187);}
     align-items: center;
     width: 25%;
 }
-
+.major_images .major_star_container{
+    display: flex;
+    justify-content: center;
+}
 .major_icons_container{
     display: flex;
+
 }
 .major_icons_container p{
     padding-left: 10px;
