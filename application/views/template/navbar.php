@@ -28,17 +28,20 @@
                             <i class="fas fa-chevron-right"></i>
                             <ul class="navbar-drop-down-small">
                                 <div>
-                                    <a href="<?php echo base_url(); ?>DetailPage"><li>Java</li></a>
+                                    <a href="<?php echo base_url(); ?>Category?Major=java"><li>Java</li></a>
                                 </div>
                                 <div>
-                                    <a href="<?php echo base_url(); ?>DetailPage"><li>Javascript</li></a>
+                                    <a href="<?php echo base_url(); ?>Category?Major=javascript"><li>Javascript</li></a>
         
                                 </div>
                                 <div>
-                                    <a href="<?php echo base_url(); ?>DetailPage"><li>Python</li></a>
+                                    <a href="<?php echo base_url(); ?>Category?Major=python"><li>Python</li></a>
                                 </div>
                                 <div>
-                                    <a href="<?php echo base_url(); ?>DetailPage"><li>PHP</li></a>
+                                    <a href="<?php echo base_url(); ?>Category?Major=php"><li>PHP</li></a>
+                                </div>
+                                <div>
+                                    <a href="<?php echo base_url(); ?>Category?Major=it"><li>IT</li></a>
                                 </div>
                             </ul>
                         </div>
