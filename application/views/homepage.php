@@ -50,14 +50,14 @@
         
             <div class="homepage-mostviewed-navcontainer">
                 <nav>
-                    <ul>
-                        <li class="current">Python</li>
-                        <li>Java</li>
-                        <li>Web development</li>
-                        <li>Data Science</li>
-                        <li>Mybatis</li>
-                        <li>PHP</li>
-                        <li>CodeIgniter</li>
+                    <ul id="homepage-major-container">
+                        <li id="homepage-python" class="current">Python</li>
+                        <li id="homepage-java">Java</li>
+                        <li id="homepage-web-development">Web development</li>
+                        <li id="homepage-data-science">Data Science</li>
+                        <li id="homepage-Mybatis">Mybatis</li>
+                        <li id="homepage-php">PHP</li>
+                        <li id="homepage-codeIgniter">CodeIgniter</li>
                     </ul>
                 </nav>
             </div>
@@ -258,4 +258,20 @@
     </div>
     
 </body>
+    <script>
+        const majors = document.querySelector("#homepage-major-container");
+        var current_major = "";
+        majors.addEventListener("click",function(e){
+            current_major = e.target.textContent.toLowerCase().split(" ").join("");
+            $.ajax({
+                url:`<?php echo base_url(); ?>Home/fetch_most_favourite_course`,
+                data:{field:current_major},
+                method:"POST",
+                success:function(response) {
+                    var data = JSON.parse(response)
+                    console.log(data);
+                }
+            })
+        })
+    </script>
 </html>
