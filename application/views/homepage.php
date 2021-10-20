@@ -16,11 +16,9 @@
         <div class="homepage-head-banner">
             <div class="homepage-background-image">
                 <div class="homepage-description">
-                    <h1>MemberShip from A$12.99</h1>
-                    <p>Shop our love to Learn Sale by Aug.13 to score bonus lessons.</p>
-                    <div class="homepage-description-button">
-                        <a href="">Join Us Now</a>
-                    </div>
+                    <h1>Best online learning platform</h1>
+                    <p>Join us and start your learning and sharing journey.</p>
+
                 </div>
             </div>
         </div>
@@ -225,7 +223,7 @@
                     console.log(data);
                     container.innerHTML = `
                     <h3>Expand your career opportunities with ${e.target.textContent}</h3>
-                    <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, Python is one of the most important skills you can learn. Python's simple syntax is especially suited for desktop, web, and business applications. Python's design philosophy emphasizes readability and usability. Python was...</p>
+                    <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, ${e.target.textContent} is one of the most important skills you can learn. </p>
 
                     <a href="" class="homepage-mostviewed-btn">
                             Explore ${e.target.textContent}
@@ -253,7 +251,10 @@
                 }
             })
         })
-
+        const init = document.querySelector("#initial-data");
+        console.log(init.value);
+        const initialData = JSON.parse(init.value);
+        console.log(initialData);
 
     </script>
 </html>
