@@ -35,4 +35,20 @@ class Lecture_model extends CI_Model{
         $result = $this->db->get();
         return $result->result_array()[0]['username'];
     }
+
+    function fetch_course_name_by_cid($cid){
+        $this->db->select('course_name');
+        $this->db->from('upload_list');
+        $this->db->where('course_id', $cid);
+        $result = $this->db->get();
+        return $result->result_array()[0]['course_name'];
+    }
+
+    function fetch_course_desc_by_cid($cid){
+        $this->db->select('course_description');
+        $this->db->from('upload_list');
+        $this->db->where('course_id', $cid);
+        $result = $this->db->get();
+        return $result->result_array()[0]['course_description'];
+    }
 }

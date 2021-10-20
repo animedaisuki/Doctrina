@@ -16,16 +16,14 @@
 
         <hr class="lec_split">
 
-        <h2>Duration: 4 Hours</h2>
+        <h2><?php echo $course_name?></h2>
 
         <hr class="lec_split">
 
         <h2>Course Information</h2>
 
-        <p style="padding: 20px 40px 20px 40px; line-height: 25px; text-align: left; font-size: 20px;">Introduction to
-            Software Engineering through programming with particular focus on the fundamentals of
-            computing & programming, using an exploratory problem-based approach. Building abstractions with procedures,
-            data & objects; data modelling; designing, coding & debugging programs of increasing complexity
+        <p style="padding: 20px 40px 20px 40px; line-height: 25px; text-align: left; font-size: 20px;">
+            <?php echo $desc?>
         </p>
     </div>
 
@@ -45,11 +43,16 @@
 
         <!--        <embed src="https://localhost/demo/uploads/files/47_Team_010.pdf" width="500" height="375">-->
 
-        <!--        <video id="video" width="450" height="170" controls>-->
-        <!--            <source src="https://localhost/demo/uploads/videos/UMAC.mp4" type="video/mp4">-->
-        <!--        </video>-->
+<!--            <video id="video" width="450" height="170" controls>-->
+<!--                <source src="https://localhost/demo/uploads/videos/UMAC.mp4" type="video/mp4">-->
+<!--            </video>-->
 
-    </div>
+    <a src="https://localhost/demo/uploads/videos/UMAC.mp4">
+
+
+    </a>
+
+
 
 </div>
 
