@@ -75,16 +75,32 @@
         for(let i = 0; i<data.length; i++){
             const lec_video_row = document.createElement("div");
             lec_video_row.classList.add("lec_row");
-            lec_video_row.innerHTML = `
+
+            if (data === lec_videos_json_value){
+                lec_video_row.innerHTML = `
                 <div class="lec_row_play">
-                    <a href ="">
+                    <a href ="uploads/videos/${data[i].filename}">
                         ${icon}
                     </a>
                 </div>
                 <h4 class="lec_row_week">Week ${data[i].week}</h4>
                 <p class="lec_row_title">${data[i].filename}</p>
             `
-            lec_row_container.appendChild(lec_video_row);
+                lec_row_container.appendChild(lec_video_row);
+            }
+
+            if (data === lec_docs_json_value){
+                lec_video_row.innerHTML = `
+                <div class="lec_row_play">
+                    <a href ="uploads/files/${data[i].filename}">
+                        ${icon}
+                    </a>
+                </div>
+                <h4 class="lec_row_week">Week ${data[i].week}</h4>
+                <p class="lec_row_title">${data[i].filename}</p>
+            `
+                lec_row_container.appendChild(lec_video_row);
+            }
         }
     }
     render('<i class="fas fa-play-circle"></i>',lec_videos_json_value);
