@@ -11,7 +11,7 @@
 <body>
 <input id="initial-data" value='<?php echo $python; ?>'>
 <input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'>
-
+<input id="popular_courses" value='<?php echo $popular_course; ?>'>
     <div class="homepage-container">
         <div class="homepage-head-banner">
             <div class="homepage-background-image">

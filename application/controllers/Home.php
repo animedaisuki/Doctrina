@@ -51,6 +51,10 @@ class Home extends CI_Controller{
         $data['popular_teachers'] = $this->Utils_model->get_teachers_by_favourite_number();
         $data['popular_teachers'] = json_encode($data['popular_teachers']);
         $data['python'] = json_encode(array_slice($data['python'],0,5));
+
+        //获取最收欢迎课程数据
+        $data['popular_course'] = $this->Utils_model->get_popular_courses();
+        $data['popular_course'] = json_encode($data['popular_course']);
         $this->load->view('template/navbar');
         $this->load->view('homepage',$data);
         $this->load->view('template/footer');
