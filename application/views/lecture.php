@@ -1,10 +1,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/lecture.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
-
-<input id="lec_docs" value='<?php echo $docs; ?>' style="display:none;">
-<input id="lec_video" value='<?php echo $videos; ?>'style="display:none;">
-<input id="lec_author" value='<?php echo $author; ?>'style="display:none;">
+<input id="lec_docs" value='<?php echo $docs; ?>'>
+<input id="lec_video" value='<?php echo $videos; ?>'>
+<input id="lec_author" value='<?php echo $author; ?>'>
 
 <div class="lec_container">
     <div class="lec_left">
@@ -44,16 +43,11 @@
 
         <!--        <embed src="https://localhost/demo/uploads/files/47_Team_010.pdf" width="500" height="375">-->
 
-<!--            <video id="video" width="450" height="170" controls>-->
-<!--                <source src="https://localhost/demo/uploads/videos/UMAC.mp4" type="video/mp4">-->
-<!--            </video>-->
+        <!--        <video id="video" width="450" height="170" controls>-->
+        <!--            <source src="https://localhost/demo/uploads/videos/UMAC.mp4" type="video/mp4">-->
+        <!--        </video>-->
 
-    <a src="https://localhost/demo/uploads/videos/UMAC.mp4">
-
-
-    </a>
-
-
+    </div>
 
 </div>
 
@@ -106,13 +100,11 @@
     render('<i class="fas fa-play-circle"></i>',lec_videos_json_value);
 
     lecture_select.addEventListener("click",function(e){
-
+        lec_row_container.innerHTML = '';
         if(e.target.textContent == "Lecture Videos"){
-
             lec_row_container.innerHTML='';
             render('<i class="fas fa-play-circle"></i>',lec_videos_json_value);
         }else if(e.target.textContent == "Lecture Slides"){
-            lec_row_container.innerHTML = '';
             render('<i class="fas fa-eye"></i>',lec_docs_json_value)
         }
     })
