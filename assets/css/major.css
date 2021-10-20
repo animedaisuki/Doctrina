@@ -76,10 +76,9 @@ tr:hover {background-color: rgb(243, 184, 187);}
 .major_container2{
     display: flex;
     width:100%;
-    max-width: 1200px;
     flex-wrap: wrap;
-    margin-bottom: 50px;
     align-items: flex-start;
+    height: auto;
 }
 .major_container2 img{
     height: 170px;
@@ -97,6 +96,7 @@ tr:hover {background-color: rgb(243, 184, 187);}
     flex-direction: column;
     align-items: center;
     width: 25%;
+    height: auto;
 }
 .major_images .major_star_container{
     display: flex;

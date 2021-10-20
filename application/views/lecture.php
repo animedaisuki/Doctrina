@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/lecture.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 <input id="lec_docs" value='<?php echo $docs; ?>'>
 <input id="lec_video" value='<?php echo $videos; ?>'>
 <input id="lec_author" value='<?php echo $author; ?>'>
@@ -13,12 +13,6 @@
         <h2>David</h2>
 
         <hr class="lec_split">
-
-        <i class="fas fa-star lec-fa-star"></i>
-        <i class="fas fa-star lec-fa-star"></i>
-        <i class="fas fa-star lec-fa-star"></i>
-        <i class="fas fa-star lec-fa-star"></i>
-        <i class="fas fa-star lec-fa-star"></i>
 
         <hr class="lec_split">
 
@@ -44,6 +38,10 @@
             <h1 class="lec_feedback">Feedbacks</h1>
             <h1 class="lec_qa">Question&Answer</h1>
         </div>
+        <div class="lec_row_container">
+
+        </div>
+
 
         <!--        <embed src="https://localhost/demo/uploads/files/47_Team_010.pdf" width="500" height="375">-->
 
@@ -65,7 +63,37 @@
 
     console.log(lec_docs_json_value);
     console.log(lec_videos_json_value);
+    const lec_row_container = document.querySelector(".lec_row_container")
+    const lecture_select = document.querySelector(".lec_select")
 
+
+    function render (icon,data){
+        for(let i = 0; i<data.length; i++){
+            const lec_video_row = document.createElement("div");
+            lec_video_row.classList.add("lec_row");
+            lec_video_row.innerHTML = `
+                <div class="lec_row_play">
+                    <a href ="">
+                        ${icon}
+                    </a>
+                </div>
+                <h4 class="lec_row_week">Week ${data[i].week}</h4>
+                <p class="lec_row_title">${data[i].filename}</p>
+            `
+            lec_row_container.appendChild(lec_video_row);
+        }
+    }
+    render('<i class="fas fa-play-circle"></i>',lec_videos_json_value);
+
+    lecture_select.addEventListener("click",function(e){
+        lec_row_container.innerHTML = '';
+        if(e.target.textContent == "Lecture Videos"){
+            lec_row_container.innerHTML='';
+            render('<i class="fas fa-play-circle"></i>',lec_videos_json_value);
+        }else if(e.target.textContent == "Lecture Slides"){
+            render('<i class="fas fa-eye"></i>',lec_docs_json_value)
+        }
+    })
 
 
 

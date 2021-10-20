@@ -17,6 +17,17 @@
         <div class="major_container2">
 <!--
             <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
+                <div class="major_icons_container">
+                    <i class="far fa-user-circle"></i>
+                    <p> Mr.Korb</p>
+                    <i class="fas fa-fire"></i>
+                    <p>520</p>
+                </div>
+                <p> How to guide students step to study</p>
+            </a>
+
+            <a class="major_images">
 
                 <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
 
@@ -28,9 +39,8 @@
                 </div>
                 <p> How to guide students step to study</p>
             </a>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels2.jpg" alt="major image">  
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -38,16 +48,9 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels3.jpg" alt="major image">  
+            </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -55,16 +58,9 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels4.jpg" alt="major image">  
+            </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -72,16 +68,19 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels5.jpg" alt="major image">  
+            </a>
+             <a class="major_images">
+                 <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
+                 <div class="major_icons_container">
+                     <i class="far fa-user-circle"></i>
+                     <p> Mr.Korb</p>
+                     <i class="fas fa-fire"></i>
+                     <p>520</p>
+                 </div>
+                 <p> How to guide students step to study</p>
+             </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -89,16 +88,9 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-            <img src="<?php echo base_url(); ?>assets/img/major-pexels6.jpg" alt="major image">  
+            </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -106,16 +98,9 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">  
+            </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -123,16 +108,9 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels2.jpg" alt="major image">  
+            </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -140,16 +118,9 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels3.jpg" alt="major image">  
+            </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -157,16 +128,9 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels4.jpg" alt="major image">  
+            </a>
+            <a class="major_images">
+                <img src="<?php echo base_url(); ?>assets/img/major-pexels1.jpg" alt="major image">
                 <div class="major_icons_container">
                     <i class="far fa-user-circle"></i>
                     <p> Mr.Korb</p>
@@ -174,71 +138,15 @@
                     <p>520</p>
                 </div>
                 <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels5.jpg" alt="major image">  
-                <div class="major_icons_container">
-                    <i class="far fa-user-circle"></i>
-                    <p> Mr.Korb</p>
-                    <i class="fas fa-fire"></i>
-                    <p>520</p>
-                </div>
-                <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels6.jpg" alt="major image">  
-                <div class="major_icons_container">
-                    <i class="far fa-user-circle"></i>
-                    <p> Mr.Korb</p>
-                    <i class="fas fa-fire"></i>
-                    <p>520</p>
-                </div>
-                <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="major_images">
-                <img src="<?php echo base_url(); ?>assets/img/major-pexels2.jpg" alt="major image">
-                <div class="major_icons_container">
-                    <i class="far fa-user-circle"></i>
-                    <p> Mr.Korb</p>
-                    <i class="fas fa-fire"></i>
-                    <p>520</p>
-                </div>
-                <p> How to guide students step to study</p>
-                <div class="major_star_container">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
--->
+            </a>
+            -->
         </div>
     </div>
-    
+
 </body>
 <script>
     const testJson = document.querySelector("#testJson");
-    const container = document.querySelector(".major_container2")
+    const container = document.querySelector(".major_container2");
     var json = JSON.parse(testJson.value);
     console.log(json);
     for(let i = 0; i<json.length; i++){
