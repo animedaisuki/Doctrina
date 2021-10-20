@@ -14,7 +14,7 @@
 
 <input id="initial-data" value='<?php echo $python; ?>' style="display:none;">
 <input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'style="display:none;">
-<input id="popular_courses" value='<?php echo $popular_course; ?>'>
+<input id="popular_courses" value='<?php echo $popular_course; ?>'style="display:none;">
 
     <div class="homepage-container">
         <div class="homepage-head-banner">
@@ -86,62 +86,8 @@
             </div>
             <div class="homepage-mostdownload-itemcontainer">
                 <div class="homepage-mostdownload-eachitem-container">
-                    <div class="homepage-mostdownload-item">
-                        <a href="">
-                            <img src="<?php echo base_url(); ?>assets/img/python1.png" alt="">
-                            <h4>2021 complete python
-                                Bootcamp From Zero to Hero</h4>
-                            <p>Jose Portilla</p>
-                            <div class="homepage-mostdownload-rating">
-                                <p>4.6 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="homepage-mostdownload-item">
-                        <a href="">
-                            <img src="<?php echo base_url(); ?>assets/img/python2.png" alt="">
-                            <h4>2021 complete python
-                                Bootcamp From Zero to Hero</h4>
-                            <p>Jose Portilla</p>
-                            <div class="homepage-mostdownload-rating">
-                                <p>4.6<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="homepage-mostdownload-item">
-                        <a href="">
-                            <img src="<?php echo base_url(); ?>assets/img/python3.png" alt="">
-                            <h4>2021 complete python
-                                Bootcamp From Zero to Hero</h4>
-                            <p>Jose Portilla</p>
-                            <div class="homepage-mostdownload-rating">
-                                <p>4.6<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="homepage-mostdownload-item">
-                        <a href="">
-                            <img src="<?php echo base_url(); ?>assets/img/python1.png" alt="">
-                            <h4>2021 complete python
-                                Bootcamp From Zero to Hero</h4>
-                            <p>Jose Portilla</p>
-                            <div class="homepage-mostdownload-rating">
-                                <p>4.6<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="homepage-mostdownload-item">
-                        <a href="">
-                            <img src="<?php echo base_url(); ?>assets/img/python2.png" alt="">
-                            <h4>2021 complete python
-                                Bootcamp From Zero to Hero</h4>
-                            <p>Jose Portilla</p>
-                            <div class="homepage-mostdownload-rating">
-                                <p>4.6<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
-                            </div>
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -176,54 +122,53 @@
 </body>
     <script>
         const majors = document.querySelector("#homepage-major-container");
-
-
         const container = document.querySelector(".homepage-mostviewed-itemcontainer");
-
-
         var current_major = "";
         majors.addEventListener("click",function(e){
-            current_major = e.target.textContent.toLowerCase().split(" ").join("");
-            for(let i = 0 ;i<majors.children.length; i++){
-                majors.children[i].classList.remove("current");
-            }
-            e.target.classList.add("current");
-            $.ajax({
-                url:`<?php echo base_url(); ?>Home/fetch_most_favourite_course`,
-                data:{field:current_major},
-                method:"POST",
-                success:function(response) {
-                    var data = JSON.parse(response)
-                    console.log(data);
-                    container.innerHTML = `
-                    <h3>Expand your career opportunities with ${e.target.textContent}</h3>
-                    <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, ${e.target.textContent} is one of the most important skills you can learn. </p>
+            if(['Python','Java','Web development', 'Data Science', 'Mybatis','PHP','CodeIgniter'].includes(e.target.textContent)){
+                current_major = e.target.textContent.toLowerCase().split(" ").join("");
+                for(let i = 0 ;i<majors.children.length; i++){
+                    majors.children[i].classList.remove("current");
+                }
+                e.target.classList.add("current");
+                $.ajax({
+                    url:`<?php echo base_url(); ?>Home/fetch_most_favourite_course`,
+                    data:{field:current_major},
+                    method:"POST",
+                    success:function(response) {
+                        var data = JSON.parse(response)
+                        console.log(data);
+                        container.innerHTML = `
+                        <h3>Expand your career opportunities with ${e.target.textContent}</h3>
+                        <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, ${e.target.textContent} is one of the most important skills you can learn. </p>
 
-                    <a href="" class="homepage-mostviewed-btn">
-                            Explore ${e.target.textContent}
-                    </a>
-                    `
-                    const eachitemcontainer = document.createElement("div");
-                    eachitemcontainer.classList.add("homepage-mostviewed-eachitem-container");
-
-                    for(let i = 0; i<data.length; i++){
-                        let item = document.createElement("div");
-                        item.classList.add("homepage-mostviewed-item");
-                        item.innerHTML = `
-                        <a href="">
-                            <img src="${data[i].course_img_path}" alt="">
-                            <h4>${data[i].course_name}</h4>
-                            <p>${data[i].username}</p>
-                            <div class="homepage-mostviewed-rating">
-                                <p><i class="fab fa-hotjar"></i>${data[i].favourite_number}</p>
-                            </div>
+                        <a href="" class="homepage-mostviewed-btn">
+                                Explore ${e.target.textContent}
                         </a>
                         `
-                        eachitemcontainer.appendChild(item);
+                        const eachitemcontainer = document.createElement("div");
+                        eachitemcontainer.classList.add("homepage-mostviewed-eachitem-container");
+
+                        for(let i = 0; i<data.length; i++){
+                            let item = document.createElement("div");
+                            item.classList.add("homepage-mostviewed-item");
+                            item.innerHTML = `
+                            <a href="">
+                                <img src="${data[i].course_img_path}" alt="">
+                                <h4>${data[i].course_name}</h4>
+                                <p>${data[i].username}</p>
+                                <div class="homepage-mostviewed-rating">
+                                    <p><i class="fab fa-hotjar"></i>${data[i].favourite_number}</p>
+                                </div>
+                            </a>
+                            `
+                            eachitemcontainer.appendChild(item);
+                        }
+                        container.appendChild(eachitemcontainer);
                     }
-                    container.appendChild(eachitemcontainer);
-                }
-            })
+                })
+            }
+
         })
 
         function init(){
@@ -251,14 +196,13 @@
         function favouriteTeacher(){
             const init = document.querySelector("#favourite_teacher_name");
             const initialData = JSON.parse(init.value);
-            console.log(initialData);
             const teacherContainer = document.querySelector(".homepage-teacheritem-container");
             for(let i = 0; i<initialData.length; i++){
                 let teacheritem = document.createElement("div");
                 teacheritem.classList.add("homepage-teacheritem")
                 teacheritem.innerHTML = `
                 <div class="homepage-teacher-description">
-                    <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
+                    <img src="${initialData[i].avatar}" alt="">
                     <p>Teacher ${initialData[i].username} has</p>
                 </div>
                 <p class="homepage-teacher-strong">${initialData[i].favourite_number} views</p>
@@ -267,6 +211,30 @@
             }
         }
         favouriteTeacher();
+
+        function favouriteCourse(){
+            const init = document.querySelector("#popular_courses");
+            const initialData = JSON.parse(init.value);
+            console.log(initialData);
+            const courseContainer = document.querySelector(".homepage-mostdownload-eachitem-container");
+            for(let i = 0; i<initialData.length; i++){
+                let courseitem = document.createElement("div");
+                courseitem.classList.add("homepage-mostdownload-item")
+                courseitem.innerHTML = `
+                <a href="">
+                    <img src="${initialData[i].course_img_path}" alt="">
+                    <h4>${initialData[i].course_name}</h4>
+                    <p>${initialData[i].username}</p>
+                    <div class="homepage-mostdownload-rating">
+                        <p><i class="fab fa-hotjar"></i>${initialData[i].favourite_number}</p>
+                    </div>
+                </a>
+                `
+                courseContainer.appendChild(courseitem);
+            }
+        }
+        favouriteCourse();
+
 
 
 
