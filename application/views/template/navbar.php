@@ -45,9 +45,22 @@
                                 </div>
                             </ul>
                         </div>
-                        <div>
-                            <li class="navbar-major-art">Art</li>
+                        <div class="navbar-major-programming">
+                            <li >Art</li>
                             <i class="fas fa-chevron-right"></i>
+                            <ul class="navbar-drop-down-small">
+                                <div>
+                                    <a href="<?php echo base_url(); ?>Category?Major=sketch"><li>Sketch</li></a>
+                                </div>
+                                <div>
+                                    <a href="<?php echo base_url(); ?>Category?Major=painting"><li>Painting</li></a>
+
+                                </div>
+                                <div>
+                                    <a href="<?php echo base_url(); ?>Category?Major=sculpture"><li>Sculpture</li></a>
+                                </div>
+
+                            </ul>
                         </div>
                         <div>
                             <li class="navbar-major-math">Math</li>
