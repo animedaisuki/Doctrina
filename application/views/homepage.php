@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/homepage.css">
 
 </head>
+<body>
 <input id="initial-data" value='<?php echo $python; ?>'>
 <input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'>
-<body>
-<input id="initial-data" value='<?php echo $python; ?>' style="display:none;">
-<input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>' style="display:none;">
 
     <div class="homepage-container">
         <div class="homepage-head-banner">
@@ -210,8 +208,7 @@
     <script>
         const majors = document.querySelector("#homepage-major-container");
 
-       
-=======
+
         const container = document.querySelector(".homepage-mostviewed-itemcontainer");
 
 
@@ -263,7 +260,6 @@
 
         var Jsonteachers = JSON.parse(teachers.value);
         console.log(Jsonteachers);
-=======
 
 
     </script>
