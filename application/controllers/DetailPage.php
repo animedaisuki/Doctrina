@@ -7,8 +7,16 @@ class DetailPage extends CI_Controller{
 		$this->load->helper('url');
         $this->load->model('Detail_model');
         $cid = $this->input->get('cid');
+        $favourite = $this->Detail_model->check_favourite($cid, $_SESSION['username']);
+//         var_dump($favourite);
+        if (is_null($favourite)) {
+            $data['favourite'] = true;
+        } else {
+            $data['favourite'] = false;
+        }
         $data['course_info'] = $this->Detail_model->get_course_data($cid);
         $data['what_to_Learn'] = $this->Detail_model->get_course_detail($cid);
+
         $data['cid'] = $cid;
 		$this->load->view('template/navbar');
         $this->load->view('detailpage', $data);
