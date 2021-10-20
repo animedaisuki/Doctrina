@@ -1,9 +1,10 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/lecture.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
-<input id="lec_docs" value='<?php echo $docs; ?>'>
-<input id="lec_video" value='<?php echo $videos; ?>'>
-<input id="lec_author" value='<?php echo $author; ?>'>
+
+<input id="lec_docs" value='<?php echo $docs; ?>' style="display:none;">
+<input id="lec_video" value='<?php echo $videos; ?>'style="display:none;">
+<input id="lec_author" value='<?php echo $author; ?>'style="display:none;">
 
 <div class="lec_container">
     <div class="lec_left">
@@ -86,11 +87,13 @@
     render('<i class="fas fa-play-circle"></i>',lec_videos_json_value);
 
     lecture_select.addEventListener("click",function(e){
-        lec_row_container.innerHTML = '';
+
         if(e.target.textContent == "Lecture Videos"){
+
             lec_row_container.innerHTML='';
             render('<i class="fas fa-play-circle"></i>',lec_videos_json_value);
         }else if(e.target.textContent == "Lecture Slides"){
+            lec_row_container.innerHTML = '';
             render('<i class="fas fa-eye"></i>',lec_docs_json_value)
         }
     })
