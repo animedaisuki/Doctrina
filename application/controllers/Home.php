@@ -37,8 +37,22 @@ class Home extends CI_Controller{
         //     }
         // }
         //还需要判断普通登入的情况，需要再做一个navbar的view
+
+        //获取初始化推荐课程数据
+        $this->load->model('Utils_model');
+        $data['python'] = $this->Utils_model->get_course_by_major_name("python");
+        foreach($data['python'] as $key => $value) {
+            if ($value['course_id'] == null) {
+                $data['python'][$key]["favourite_number"] = "0";
+            }
+            unset($data['python'][$key]['course_id']);
+        }
+        //获取最受喜爱的老师数据
+        $data['popular_teachers'] = $this->Utils_model->get_teachers_by_favourite_number();
+        $data['popular_teachers'] = json_encode($data['popular_teachers']);
+        $data['python'] = json_encode(array_slice($data['python'],0,5));
         $this->load->view('template/navbar');
-        $this->load->view('homepage');
+        $this->load->view('homepage',$data);
         $this->load->view('template/footer');
     }
 

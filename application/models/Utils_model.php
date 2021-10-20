@@ -55,6 +55,16 @@ class Utils_model extends CI_Model {
         return $result->result_array();
     }
 
+    function get_teachers_by_favourite_number() {
+        $sql = "SELECT u.id,u.username,COUNT(*) as favourite_number 
+                FROM user u, upload_list ul,favorite_list fl 
+                where u.id = ul.author_id AND ul.course_id = fl.course_id 
+                GROUP BY u.id
+                ORDER BY favourite_number DESC";
+        $result = $this->db->query($sql);
+        return $result->result_array();
+    }
+
 }
 
 ?>
