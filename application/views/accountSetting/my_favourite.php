@@ -126,7 +126,7 @@
     
     table.addEventListener("click", function(e){
         if(e.target.classList.contains("delete-favourite-course")){
-            const courseid = document.querySelector(".favourite-course-id");
+//             const courseid = document.querySelector(".favourite-course-id");
             e.preventDefault();
             let id = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.children[1].textContent;
             e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();
@@ -139,7 +139,7 @@
                 }
             })
         }else if (e.target.classList.contains("my_upload_delete")){
-            const courseid = document.querySelector(".course-id");
+//             const courseid = document.querySelector(".course-id");
             e.preventDefault();
             let id = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.children[1].textContent;
             e.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove();

@@ -38,5 +38,16 @@ class Detail_model extends CI_Model{
         return $this->db->insert('favorite_list', $data);
     }
 
+    function check_favourite($cid, $username)
+    {
+    $query = $this->db->query("SELECT favorite_list.id
+    FROM user,favorite_list
+    WHERE
+    user.username = '$username'
+    AND user.id = favorite_list.uid
+    AND favorite_list.course_id = '$cid'
+    ");
+    return $query->row_array();
+    }
     
 }

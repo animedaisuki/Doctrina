@@ -27,7 +27,12 @@
             <div class="detailpage-buttons">
                 <div><a href="<?php echo base_url(); ?>Lecture?cid=<?php echo $cid; ?>">Start Learning</a></div>
                 <div><a href="">Download</a></div>
+                <?php if($favourite == true): ?>
                 <div><a href="<?php echo base_url(); ?>DetailPage/Add_favourite_course" class="detailpage-addtofavorite">Add to favorite</a></div>
+                <?php endif; ?>
+                <?php if($favourite == false): ?>
+                <div><a href="<?php echo base_url(); ?>DetailPage/Add_favourite_course" class="detailpage-addtofavorite">Added</a></div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="detailpage-whatyouwilllearn-container">

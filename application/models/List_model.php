@@ -21,6 +21,8 @@
     return $query;
     }
 
+
+
     function fetch_uploads_data($username)
     {
     $query = $this->db->query("SELECT upload_list.course_name, upload_list.course_id, user.username, upload_list.upload_date, upload_list.uuid

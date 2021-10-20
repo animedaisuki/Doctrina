@@ -12,6 +12,8 @@ class Utils_model extends CI_Model {
         return $result->row_array()['course_id'];
     }
 
+
+
     function get_file_by_cid_and_week($cid,$currentWeek) {
         $sql = "SELECT uuid,filename FROM doc_path WHERE cid = '$cid' AND week = '$currentWeek'";
         $result = $this->db->query($sql);
