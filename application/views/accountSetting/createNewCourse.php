@@ -17,8 +17,17 @@
             <div class="createNewCourse-courseName">
                 <input type="text" placeholder="Course name:" name="Coursename" required>
             </div>
-            <div class="createNewCourse-courseName">
-                <input type="text" placeholder="Field:" name="Field" required>
+            <div class="createNewCourse-Field">
+                <p class="createField">Field</p>
+                <select name="Field" required>
+                  <option value="python">Python</option>
+                  <option value="java">Java</option>
+                  <option value="webdevelopment">Web Development</option>
+                  <option value="datascience">Data Science</option>
+                  <option value="mybatis">Mybatis</option>
+                  <option value="php">PHP</option>
+                  <option value="codeigniter">CodeIgniter</option>
+                </select>
             </div>
             <div class="createNewCourse-intro">
                 <textarea type="text" placeholder="Intro:" name="Introduction" required></textarea>
@@ -77,6 +86,5 @@
     description.addEventListener("click", function(){
         console.log(description.value);
     })
-
 </script>
 </html>
