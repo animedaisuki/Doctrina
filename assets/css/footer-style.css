@@ -29,6 +29,9 @@
 	list-style-type: none;
 	color:#FFFFFF;
 }
+.footer-text ul li a{
+	color: #bd0000;
+}
 
 .logo-img{
 	width: 100px;

@@ -121,27 +121,31 @@ a {
 .homepage-mostviewed-p {
   margin: 10px 0px;
 }
-.homepage-mostviewed-explore-button {
-  width: 120px;
-  height: 40px;
+.homepage-mostviewed-btn{
+  display: inline-block;
   border: 1px solid rgb(68, 68, 68);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(68, 68, 68);
+  height: 40px;
+  padding:10px 10px 0 10px;
+
   margin: 10px 0px;
 }
+
 .homepage-mostviewed-eachitem-container,
 .homepage-mostdownload-eachitem-container {
   display: flex;
-  padding: 10px;
+  padding: 10px 0px;
   justify-content: space-between;
 }
 .homepage-mostviewed-eachitem-container .homepage-mostviewed-item,
 .homepage-mostdownload-eachitem-container .homepage-mostdownload-item {
   width: 20%;
-  overflow: hidden;
-  padding: 10px;
+}
+.homepage-mostviewed-eachitem-container .homepage-mostviewed-item img,
+.homepage-mostdownload-eachitem-container .homepage-mostdownload-item img{
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
 }
 .homepage-mostviewed-eachitem-container .homepage-mostviewed-item h4,
 .homepage-mostdownload-eachitem-container .homepage-mostdownload-item h4 {
@@ -151,10 +155,7 @@ a {
 .homepage-mostdownload-eachitem-container .homepage-mostdownload-item p {
   font-size: 10px;
 }
-.homepage-mostviewed-item .homepage-mostviewed-rating,
-.homepage-mostdownload-item .homepage-mostdownload-rating {
-  color: orange;
-}
+
 
 /*information*/
 .homepage-information-container {

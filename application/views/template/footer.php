@@ -10,14 +10,15 @@
 			<div class="footer-container">
 				<div class="footer-text">
 					<ul>
-						<li>Doctrina Business</li>
-						<li>Tecnology support</li>
-						<li>About us</li>
+						<li>David Guo</li>
+						<li>Zijun Li</li>
+						<li>Ziqi Yuan</li>
+						<li>Chicheng Xu</li>
 					</ul>
 					<ul>
-						<li>Developer</li>
-						<li>Designer</li>
-						<li>Team Leader</li>
+						<li>Peiying Liu</li>
+						<li>Tingwen Tan</li>
+						<li><a href="">References</a></li>
 					</ul>
 				</div>
 				<div class="logo-img">
