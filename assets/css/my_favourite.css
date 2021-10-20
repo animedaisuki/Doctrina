@@ -6,12 +6,10 @@
 
 .My-Favourite-Container {
   width: 90%;
-  margin: auto;
-  margin-top: 3em;
-  height: 500px;
+  margin: 3em auto auto;
 }
 .My-favorite-body{
-  height:100vh;
+  min-height:100vh;
 }
 
 .My-Favourite-box {
