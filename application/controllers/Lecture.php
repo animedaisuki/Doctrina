@@ -16,8 +16,6 @@ class Lecture extends CI_Controller{
         $data['videos'] = json_encode($videos);
         $data['author'] = $author;
 
-        var_dump($videos);
-
         $this->load->view('template/navbar');
         $this->load->view('lecture', $data);
         $this->load->view('template/footer');
