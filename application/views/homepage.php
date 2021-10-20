@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/homepage.css">
 
 </head>
+<input id="initial-data" value='<?php echo $python; ?>'>
+<input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'>
 <body>
     <div class="homepage-container">
         <div class="homepage-head-banner">
@@ -260,6 +262,7 @@
 </body>
     <script>
         const majors = document.querySelector("#homepage-major-container");
+        const teachers = document.querySelector("#favourite_teacher_name");
         var current_major = "";
         majors.addEventListener("click",function(e){
             current_major = e.target.textContent.toLowerCase().split(" ").join("");
@@ -273,5 +276,8 @@
                 }
             })
         })
+
+        var Jsonteachers = JSON.parse(teachers.value);
+        console.log(Jsonteachers);
     </script>
 </html>
