@@ -20,6 +20,7 @@
             <div class="createNewCourse-Field">
                 <p class="createField">Field</p>
                 <select name="Field" required>
+                  <option value="" disabled selected>Programming</option>
                   <option value="python">Python</option>
                   <option value="java">Java</option>
                   <option value="webdevelopment">Web Development</option>
@@ -27,6 +28,10 @@
                   <option value="mybatis">Mybatis</option>
                   <option value="php">PHP</option>
                   <option value="codeigniter">CodeIgniter</option>
+                  <option value="" disabled selected>Art</option>
+                  <option value="sketch">Sketch</option>
+                  <option value="painting">Painting</option>
+                  <option value="sculpture">Sculpture/option>
                 </select>
             </div>
             <div class="createNewCourse-intro">
