@@ -35,7 +35,7 @@ a {
   padding: 20px;
 }
 .homepage-description h1 {
-  width: 50%;
+  width: 80%;
   font-size: 20px;
   padding-bottom: 10px;
 }
@@ -135,7 +135,6 @@ a {
 .homepage-mostdownload-eachitem-container {
   display: flex;
   padding: 10px 0px;
-  justify-content: space-between;
 }
 .homepage-mostviewed-eachitem-container .homepage-mostviewed-item,
 .homepage-mostdownload-eachitem-container .homepage-mostdownload-item {

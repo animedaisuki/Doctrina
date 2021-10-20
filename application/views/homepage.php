@@ -9,18 +9,20 @@
 
 </head>
 <body>
-<input id="initial-data" value='<?php echo $python; ?>'>
-<input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'>
+
+
+
+<input id="initial-data" value='<?php echo $python; ?>' style="display:none;">
+<input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'style="display:none;">
 <input id="popular_courses" value='<?php echo $popular_course; ?>'>
+
     <div class="homepage-container">
         <div class="homepage-head-banner">
             <div class="homepage-background-image">
                 <div class="homepage-description">
-                    <h1>MemberShip from A$12.99</h1>
-                    <p>Shop our love to Learn Sale by Aug.13 to score bonus lessons.</p>
-                    <div class="homepage-description-button">
-                        <a href="">Join Us Now</a>
-                    </div>
+                    <h1>Best online learning platform</h1>
+                    <p>Join us and start your learning and sharing journey.</p>
+
                 </div>
             </div>
         </div>
@@ -164,41 +166,8 @@
         <div class="homepage-favorite-teacher">
             <h3>Students favorite teacher</h3>
             <div class="homepage-teacheritem-container">
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
+
+
             
             </div>
         </div>
@@ -228,7 +197,7 @@
                     console.log(data);
                     container.innerHTML = `
                     <h3>Expand your career opportunities with ${e.target.textContent}</h3>
-                    <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, Python is one of the most important skills you can learn. Python's simple syntax is especially suited for desktop, web, and business applications. Python's design philosophy emphasizes readability and usability. Python was...</p>
+                    <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, ${e.target.textContent} is one of the most important skills you can learn. </p>
 
                     <a href="" class="homepage-mostviewed-btn">
                             Explore ${e.target.textContent}
@@ -257,9 +226,49 @@
             })
         })
 
+        function init(){
+            const init = document.querySelector("#initial-data");
+            const initialData = JSON.parse(init.value);
+            const container = document.querySelector(".homepage-mostviewed-eachitem-container");
+            for(let i = 0; i<initialData.length; i++){
+                let item = document.createElement("div");
+                item.classList.add("homepage-mostviewed-item");
+                item.innerHTML = `
+                <a href="">
+                    <img src="${initialData[i].course_img_path}" alt="">
+                    <h4>${initialData[i].course_name}</h4>
+                    <p>${initialData[i].username}</p>
+                    <div class="homepage-mostviewed-rating">
+                        <p><i class="fab fa-hotjar"></i>${initialData[i].favourite_number}</p>
+                    </div>
+                </a>
+                `
+                container.appendChild(item);
+            }
+        };
+        init();
 
-        var Jsonteachers = JSON.parse(teachers.value);
-        console.log(Jsonteachers);
+        function favouriteTeacher(){
+            const init = document.querySelector("#favourite_teacher_name");
+            const initialData = JSON.parse(init.value);
+            console.log(initialData);
+            const teacherContainer = document.querySelector(".homepage-teacheritem-container");
+            for(let i = 0; i<initialData.length; i++){
+                let teacheritem = document.createElement("div");
+                teacheritem.classList.add("homepage-teacheritem")
+                teacheritem.innerHTML = `
+                <div class="homepage-teacher-description">
+                    <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
+                    <p>Teacher ${initialData[i].username} has</p>
+                </div>
+                <p class="homepage-teacher-strong">${initialData[i].favourite_number} views</p>
+                `
+                teacherContainer.appendChild(teacheritem);
+            }
+        }
+        favouriteTeacher();
+
+
 
 
     </script>
