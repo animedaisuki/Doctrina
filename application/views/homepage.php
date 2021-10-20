@@ -9,8 +9,8 @@
 
 </head>
 <body>
-<input id="initial-data" value='<?php echo $python; ?>'>
-<input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'>
+<input id="initial-data" value='<?php echo $python; ?>' style="display:none;">
+<input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'style="display:none;">
 
     <div class="homepage-container">
         <div class="homepage-head-banner">
@@ -162,41 +162,8 @@
         <div class="homepage-favorite-teacher">
             <h3>Students favorite teacher</h3>
             <div class="homepage-teacheritem-container">
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
-                <div class="homepage-teacheritem">
-                    <div class="homepage-teacher-description">
-                        <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
-                        <p>Teacher Mr.Alex has</p>
-                    </div>
-                    <p class="homepage-teacher-strong">5200 views</p>
-                </div>
+
+
             
             </div>
         </div>
@@ -254,13 +221,50 @@
                 }
             })
         })
-        const init = document.querySelector("#initial-data");
-        console.log(init.value);
-        const initialData = JSON.parse(init.value);
-        console.log(initialData);
 
-        var Jsonteachers = JSON.parse(teachers.value);
-        console.log(Jsonteachers);
+        function init(){
+            const init = document.querySelector("#initial-data");
+            const initialData = JSON.parse(init.value);
+            const container = document.querySelector(".homepage-mostviewed-eachitem-container");
+            for(let i = 0; i<initialData.length; i++){
+                let item = document.createElement("div");
+                item.classList.add("homepage-mostviewed-item");
+                item.innerHTML = `
+                <a href="">
+                    <img src="${initialData[i].course_img_path}" alt="">
+                    <h4>${initialData[i].course_name}</h4>
+                    <p>${initialData[i].username}</p>
+                    <div class="homepage-mostviewed-rating">
+                        <p><i class="fab fa-hotjar"></i>${initialData[i].favourite_number}</p>
+                    </div>
+                </a>
+                `
+                container.appendChild(item);
+            }
+        };
+        init();
+
+        function favouriteTeacher(){
+            const init = document.querySelector("#favourite_teacher_name");
+            const initialData = JSON.parse(init.value);
+            console.log(initialData);
+            const teacherContainer = document.querySelector(".homepage-teacheritem-container");
+            for(let i = 0; i<initialData.length; i++){
+                let teacheritem = document.createElement("div");
+                teacheritem.classList.add("homepage-teacheritem")
+                teacheritem.innerHTML = `
+                <div class="homepage-teacher-description">
+                    <img src="<?php echo base_url(); ?>assets/img/reviewer-portrait.jpeg" alt="">
+                    <p>Teacher ${initialData[i].username} has</p>
+                </div>
+                <p class="homepage-teacher-strong">${initialData[i].favourite_number} views</p>
+                `
+                teacherContainer.appendChild(teacheritem);
+            }
+        }
+        favouriteTeacher();
+
+
 
 
     </script>
