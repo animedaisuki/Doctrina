@@ -14,8 +14,8 @@
 
 <input id="initial-data" value='<?php echo $python; ?>' style="display:none;">
 <input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'style="display:none;">
-<input id="popular_courses" value='<?php echo $popular_course; ?>'>
-
+<input id="popular_courses" value='<?php echo $popular_course; ?>' style="display:none;">
+<input id="base_url" value='<?php echo base_url(); ?>' style="display:none;">
     <div class="homepage-container">
         <div class="homepage-head-banner">
             <div class="homepage-background-image">
@@ -179,7 +179,8 @@
 
 
         const container = document.querySelector(".homepage-mostviewed-itemcontainer");
-
+        const base_url = document.querySelector("#base_url");
+        console.log(base_url.value);
 
         var current_major = "";
         majors.addEventListener("click",function(e){
@@ -210,7 +211,7 @@
                         let item = document.createElement("div");
                         item.classList.add("homepage-mostviewed-item");
                         item.innerHTML = `
-                        <a href="">
+                        <a href="${base_url.value}DetailPage?cid=${data[i].cid}">
                             <img src="${data[i].course_img_path}" alt="">
                             <h4>${data[i].course_name}</h4>
                             <p>${data[i].username}</p>
@@ -234,7 +235,7 @@
                 let item = document.createElement("div");
                 item.classList.add("homepage-mostviewed-item");
                 item.innerHTML = `
-                <a href="">
+                <a href="${base_url.value}DetailPage?cid=${initialData[i].cid}">
                     <img src="${initialData[i].course_img_path}" alt="">
                     <h4>${initialData[i].course_name}</h4>
                     <p>${initialData[i].username}</p>
