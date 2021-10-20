@@ -24,6 +24,7 @@
 
         <p style="padding: 20px 40px 20px 40px; line-height: 25px; text-align: left; font-size: 20px;">
             <?php echo $desc?>
+            desc
         </p>
     </div>
 
