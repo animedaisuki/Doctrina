@@ -41,4 +41,17 @@ class Home extends CI_Controller{
         $this->load->view('homepage');
         $this->load->view('template/footer');
     }
+
+    function fetch_most_favourite_course() {
+        $major = $this->input->post('field');
+        $this->load->model('Utils_model');
+        $result = $this->Utils_model->get_course_by_major_name($major);
+        foreach($result as $key => $value) {
+            if ($value['course_id'] == null) {
+                $result[$key]["favourite_number"] = "0";
+            }
+            unset($result[$key]['course_id']);
+        }
+        echo json_encode(array_slice($result,0,5));
+    }
 }

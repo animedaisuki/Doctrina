@@ -41,7 +41,7 @@
                                     <a href="<?php echo base_url(); ?>Category?Major=php"><li>PHP</li></a>
                                 </div>
                                 <div>
-                                    <a href="<?php echo base_url(); ?>Category?Major=it"><li>IT</li></a>
+                                    <a href="<?php echo base_url(); ?>Category?Major=datascience"><li>Data Science</li></a>
                                 </div>
                             </ul>
                         </div>
