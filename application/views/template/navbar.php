@@ -91,14 +91,18 @@
 
 
             </div>
+
+
             <div class="navbar-icon-container">
                 <i class="fas fa-search"></i>
             </div>
+
             <div class="navbar-searchbar-container">
                 <?php echo form_open('search_results/do_search'); ?>
                 <input type="text" name="auto" id="auto">
                 <?php echo form_close();?>
             </div>
+
             <ul class="navbar-navbar-container">
                 <a href="<?php echo base_url();?>about_us" class="about-us">
                     <li>About us</li>
