@@ -19,7 +19,7 @@ class Create_course extends CI_Controller{
         $field = $this->input->post('Field');
         $introduction = $this->input->post('Introduction');
         $description = $this->input->post('Description');
-        $picture = base_url()."assets/img/user_default.png";
+        $picture = base_url()."assets/img/course_default.jpg";
         $uuid = $this->input->post('uuid');
         $data['uuid'] = $uuid;
         $uid = $this->Utils_model->get_uid_by_username($_SESSION['username']);
