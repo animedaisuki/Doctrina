@@ -31,6 +31,7 @@ login->create new course -> drag your file to each week’s drop zone (right sid
 
 3.Login/Sign Up
   Click login/signUp(at right top of the view port)
+
   Support third party google login
 
 
