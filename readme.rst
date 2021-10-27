@@ -21,7 +21,6 @@ Testing account password: DavidGuo
 
 1.How to Create A New Course and Upload Your Teaching Resource
 
-
 2.How to Watch video/document
  Click course img or card you want to watch -> start learning -> click view icon
 
