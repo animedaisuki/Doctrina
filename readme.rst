@@ -18,8 +18,11 @@ Testing account username: tester
 Testing account password: DavidGuo
 
 Note:
-  1. If you try to log in with this account in your localhost or other remote server, it may not work except you set up our database we provided above
-  2. If you run our source code in your localhost or other remote server, some images may not show up as they were upload by other users in `Doctrina <https://2bnumberone.uqcloud.net/demo>`_ and were saved in the database, thus the path will be diffrent
+  1. The baseurl is configured to https://localhost/demo in config/config.php;
+  2. The database is configured for phpMyAdmin in localhost (config/database.php);
+  3. The google redirect_uri is configured to https://localhost/demo/login for localhost (config/google.php);
+  4. If you try to log in with this account in your localhost or other remote server, it may not work except you set up our database we provided above
+  5. If you run our source code in your localhost or other remote server, some images may not show up as they were upload by other users in `Doctrina <https://2bnumberone.uqcloud.net/demo>`_ and were saved in the database, thus the path will be diffrent
 
 
 1.How to Create A New Course and Upload Your Teaching Resource
