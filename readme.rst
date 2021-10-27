@@ -17,13 +17,17 @@ Testing account username: tester
 
 Testing account password: DavidGuo
 
-(If you try to log in with this account in your localhost or other remote server, it may not work except you set up our database we provided above)
+Note:
+  1. If you try to log in with this account in your localhost or other remote server, it may not work except you set up our database we provided above
+  2. If you run our source code in your localhost or other remote server, some images may not show up as they were upload by other users in `Doctrina <https://2bnumberone.uqcloud.net/demo>`_ and were saved in the database, thus the path will be diffrent
 
 
 1.How to Create A New Course and Upload Your Teaching Resource
   (Note: for document file, the format must be PDF; for video file, the format must be MP4)
 
   login->create new course -> drag your file to each week’s drop zone (right side for documents, left side for videos)
+
+
 
 2.How to Watch video/document
   Click course img or card you want to watch -> start learning -> click view icon
