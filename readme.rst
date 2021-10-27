@@ -12,8 +12,11 @@ There is a database file named "test.sql" in the folder, which already contains 
 Testers can log in to our website to test the function through the account and password provided below. Or try to create a new account yourself.
 
 Our website : `Doctrina <https://2bnumberone.uqcloud.net/demo>`_
+
 Testing account username: tester
+
 Testing account password: DavidGuo
+
 (If you try to log in with this account in your localhost or other remote server, it may not work except you set up our database we provided above)
 
 1.How to Create A New Course and Upload Your Teaching Resource
