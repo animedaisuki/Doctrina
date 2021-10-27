@@ -21,7 +21,6 @@ Testing account password: DavidGuo
 
 
 1.How to Create A New Course and Upload Your Teaching Resource
-
   (Note: for document file, the format must be PDF; for video file, the format must be MP4)
 
   login->create new course -> drag your file to each week’s drop zone (right side for documents, left side for videos)
