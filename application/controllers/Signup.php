@@ -51,19 +51,21 @@ class Signup extends CI_Controller{
     }
 
     public function register_page2() {
-        $this->form_validation->set_rules('signup-institution', 'Institution', 'required');
-        if($this->form_validation->run() === FALSE) {
-            $data['error']= "";
-            $this->load->view('template/navbar');
-            $this->load->view('login_signup/signup2', $data);
-            $this->load->view('template/footer');
-        } else {
+        // $this->form_validation->set_rules('signup-institution', 'Institution', 'required');
+        // if($this->form_validation->run() === FALSE) {
+        //     $data['error']= "";
+        //     $this->load->view('template/navbar');
+        //     $this->load->view('login_signup/signup2', $data);
+        //     $this->load->view('template/footer');
+        // } else {
         $this->load->model('Sign_up_model');
         $institution = $this->input->post('signup-institution');
-        $this->Sign_up_model->register($_SESSION['enc_password'], $_SESSION['first_name'], $_SESSION['last_name'], $_SESSION['email'], $_SESSION['username'], $institution, $_SESSION['user_picture']);
+        $major = $this->input->post('signup-Major');
+        $gender = $this->input->post('signup-Gender');
+        $this->Sign_up_model->register($_SESSION['enc_password'], $_SESSION['first_name'], $_SESSION['last_name'], $_SESSION['email'], $_SESSION['username'], $institution, $major, $gender, $_SESSION['user_picture']);
         $this->session->sess_destroy();
         redirect('home');
-        }
+        // }
     }
 
     public function check_email_exists($email) {

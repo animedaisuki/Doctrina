@@ -65,7 +65,7 @@ class AccountSetting extends CI_Controller {
 		$this->email->from('ziqi.yuan@uqconnect.edu.au');
 		$this->email->to($newEmail);
 		$this->email->subject('verifyEmail');
-		$message = 'click the link below to reset your password: 
+		$message = 'click the link below to change your email: 
 			<a href="'.base_url().'AccountSetting/set_newEmail?email='.$newEmail.'&token='.urlencode($token).'">Verify</a>';
 		$this->email->message($message);
 		$this->email->send();
@@ -80,7 +80,9 @@ class AccountSetting extends CI_Controller {
 		} else {
 			$username = $this->User_Profile->get_username_byToken($token);
 			$this->User_Profile->update_email($username, $newEmail);
-			$this->load->view('password_success');
+			$this->load->view('template/navbar');
+			$this->load->view('email-verify');
+			$this->load->view('template/footer');
 			$this->User_Profile->delete_token($username);
 		}
 	}

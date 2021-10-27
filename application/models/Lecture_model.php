@@ -45,10 +45,10 @@ class Lecture_model extends CI_Model{
     }
 
     function fetch_course_desc_by_cid($cid){
-        $this->db->select('course_description');
+        $this->db->select('intro');
         $this->db->from('upload_list');
         $this->db->where('course_id', $cid);
         $result = $this->db->get();
-        return $result->result_array()[0]['course_description'];
+        return $result->result_array()[0]['intro'];
     }
 }

@@ -25,8 +25,8 @@ class Create_course_model extends CI_Model{
         return $this->db->insert('course_detail', $data);
     }
 
-    function get_cid_by_course($uid, $course_name) {
-        $sql = "SELECT course_id FROM upload_list WHERE author_id = '$uid' AND course_name = '$course_name'";
+    function get_cid_by_course($uid, $uuid) {
+        $sql = "SELECT course_id FROM upload_list WHERE author_id = '$uid' AND uuid = '$uuid'";
         $result = $this->db->query($sql);
         return $result->row_array()['course_id'];
     }

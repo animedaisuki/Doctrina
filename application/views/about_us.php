@@ -5,50 +5,8 @@
 
 <div class="about_us_container">
     <h1>About Us</h1>
-    <div class="about_us_container2">
-        <div class="about_us_details">
-
-            <div class="about_us_our">
-                <h1>Our Courses</h1>
-                <h1>See More</h1>
-                <i class="fas fa-angle-right"></i>
-            </div>
-
-            <div class="about_us_our">
-                <h1>Our Courses</h1>
-                <h1>See More</h1>
-                <i class="fas fa-angle-right"></i>
-            </div>
-
-            <div class="about_us_our">
-                <h1>Our Courses</h1>
-                <h1>See More</h1>
-                <i class="fas fa-angle-right"></i>
-            </div>
-
-            <div class="about_us_our">
-                <h1>Our Courses</h1>
-                <h1>See More</h1>
-                <i class="fas fa-angle-right"></i>
-            </div>
-
-            <div class="about_us_our">
-                <h1>Our Courses</h1>
-                <h1>See More</h1>
-                <i class="fas fa-angle-right"></i>
-            </div>
-
-            <div class="about_us_our">
-                <h1>Our Courses</h1>
-                <h1>See More</h1>
-                <i class="fas fa-angle-right"></i>
-            </div>
-
-        </div>
-    </div>
 </div>
 
-<hr class="about_us_split">
 
 <div class="about_us_value">
     <h1>Our Core Values</h1>

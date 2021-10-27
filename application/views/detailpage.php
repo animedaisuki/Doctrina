@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Details</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/detailpage.css">
     <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 </head>
-<input value="<?php echo $cid ?>">
+<input value="<?php echo $cid ?>" style="display:none;">
 <body>
     <div class="detailpage-container">
         <div class="detailpage-header">
-            <div class="detailpage-description">
-                
+            <div class="detailpage-description">        
                 <h2><?php echo $course_info->row_array()['course_name']; ?></h2>
                 <p><?php echo $course_info->row_array()['intro']; ?></p>
                 <p style="display:none" class="course-id"><?php echo $course_info->row_array()['course_id']; ?></p></td>
-                <p><?php echo $course_info->row_array()['username']; ?></p>
+                <p>Author: <a href="<?php echo base_url(); ?>Teacher_profile?username=<?php echo $course_info->row_array()['username']; ?>"><?php echo $course_info->row_array()['username']; ?></a></p>
                 <p class="detailpage-small"><i class="fas fa-globe"></i>English</p>
-                <p class="detailpage-small"><?php echo $course_info->row_array()['upload_date']; ?></p>
+                <p class="detailpage-small">Uploaded on: <?php echo $course_info->row_array()['upload_date']; ?></p>
             </div>
             <div class="detailpage-img">
                 <img src="<?php echo $course_info->row_array()['course_img_path']; ?>" alt="">
             </div>
             <div class="detailpage-buttons">
                 <div><a href="<?php echo base_url(); ?>Lecture?cid=<?php echo $cid; ?>">Start Learning</a></div>
-                <div><a href="">Download</a></div>
                 <?php if($favourite == true): ?>
                 <div><a href="<?php echo base_url(); ?>DetailPage/Add_favourite_course" class="detailpage-addtofavorite">Add to favorite</a></div>
                 <?php endif; ?>
@@ -149,7 +147,7 @@
                 paragraph.style.height = "auto";
                 btn.textContent = "Show less";
             }else{
-                paragraph.style.height = "300px";
+                paragraph.style.height = "150px";
                 btn.textContent = "Show more";
             }
         })

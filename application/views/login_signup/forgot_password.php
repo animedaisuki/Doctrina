@@ -7,7 +7,7 @@
     <title>Forgot Password</title>
     <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/password.css">
     <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script> -->
 
 </head>
 <body>

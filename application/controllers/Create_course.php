@@ -30,7 +30,7 @@ class Create_course extends CI_Controller{
 
         $this->session->set_userdata($course_create);
 
-        $config['upload_path'] = 'assets/img/';
+        $config['upload_path'] = 'assets/course_img/';
         $config['allowed_types'] = 'png|jpg';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
@@ -38,7 +38,7 @@ class Create_course extends CI_Controller{
         
         if($this->upload->do_upload('filePicture')) {
             $filename = $this->upload->data('file_name');
-            $filepath = base_url()."assets/img/".$filename;
+            $filepath = base_url()."assets/course_img/".$filename;
             $this->Create_course_model->upload_course($course_name, $field, $introduction, $description, $uid, $filepath,$uuid);
         } else {
             $this->Create_course_model->upload_course($course_name, $field, $introduction, $description, $uid, $picture,$uuid);
@@ -58,7 +58,8 @@ class Create_course extends CI_Controller{
         $views = 0;
         $numberofitem = 1;
 
-        $course_id = $this->Create_course_model->get_cid_by_course($uid, $_SESSION['course_name']);
+        $course_id = $this->Create_course_model->get_cid_by_course($uid, $uuid);
+        // $course_id = $this->Create_course_model->get_cid_by_course($uid, $_SESSION['course_name']);
 
         // for ( $numberofitem < 10; $numberofitem++) {
         while (!empty($_POST["$numberofitem"])) {

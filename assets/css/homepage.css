@@ -207,6 +207,11 @@ a {
   display: flex;
   align-items: center;
 }
+
+.homepage-teacher-description a {
+  color: red;
+}
+
 .homepage-teacher-description p {
   margin-left: 20px;
 }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/email-verify.css">
+    <title>Change success</title>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/email-verify.css">
     <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
                     <p class="email-verify-large">Email successfully verified</p>
                     <p class="email-verify-small">Please login to your account again</p>
                 </div>
-                <button>Login now</button>
+                <button><a href="<?php echo base_url()?>Home">Return to homepage</a></button>
             </div>
         </div>
     </div>

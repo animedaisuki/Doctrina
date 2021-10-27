@@ -42,6 +42,28 @@ class My_profile extends CI_Controller {
 		$this->User_Profile->update_information($username,$institution,$major,$gender);
 		echo Json_encode($feedback);
 	}
+
+    function teacher_profile() {
+        $this->load->model('User_Profile');
+        $this->load->model('login_model');
+        $username = $this->input->get('username');
+        $email = $this->User_Profile->get_email_by_username($username);
+        $list = $this->User_Profile->get_user_data($username);
+        $data = array(
+            'email' => "Email not verified",
+            'username'=> $username,
+            'institution' => $list->row_array()['Institution'],
+            'gender' => $list->row_array()['gender'],
+            'major' => $list->row_array()['Major'],
+            'picture' => $this->login_model->find_picture($username)
+        );
+        if($email != "") {
+            $data['email'] = $email;
+        }
+        $this->load->view('template/navbar');
+        $this->load->view('accountSetting/my_profile', $data);
+        $this->load->view('template/footer');
+    }
 }
 
 ?>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup 2</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/signup.css">
     <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 
@@ -18,26 +18,24 @@
         <div class="signup-container">
             <form id="signup-form">
                 <div class='signup-input-pack'>
-                    <input type='text' class='signup-input-text' name='signup-institution' placeholder="Institution" required>
-                </div>
-                <div class='signup-input-pack'>
-                    <select class='signup-options' id='signup-education-level' required> 
-                        <option value="0">Education Level</option>
-                        <option value="1">Primary School</option>
-                        <option value="2">Secondary School</option>
-                        <option value="3">Senior Secondary School</option>
-                        <option value="4">Bachelors Degree</option>
-                        <option value="5">Masters Degree</option>
+                    <!-- <input type='text' class='signup-input-text' name='signup-institution' placeholder="Institution" required> -->
+                    <select class='signup-options' name="signup-institution" required>
+                        <option value="University of Queensland">University of Queensland</option>
+                        <option value="Griffith university">Griffith</option>
+                        <option value="Queensland university of technology">Queensland university of technology</option>
+                        <option value="Bond University">Bond University</option>
                     </select>
                 </div>
                 <div class='signup-input-pack'>
-                    <select class='signup-options' id='signup-target-student' required> 
-                        <option value="0">Target Student Grade Level</option>
-                        <option value="1">Primary School</option>
-                        <option value="2">Secondary School</option>
-                        <option value="3">Senior Secondary School</option>
-                        <option value="4">Bachelors Degree</option>
-                        <option value="5">Masters Degree</option>
+                    <select class='signup-options' name='signup-Major' required> 
+                        <option value="Information Tec">Information Tec</option>
+                        <option value="Interaction Design">Interaction Design</option>
+                    </select>
+                </div>
+                <div class='signup-input-pack'>
+                    <select class='signup-options' name='signup-Gender' required> 
+                        <option name= "Gender" type="radio" value="Male">Male</option>
+                        <option name = "Gender" type="radio" value="Female">Female</option>
                     </select>
                 </div>
                 <div class='signup-input-pack'>
@@ -47,7 +45,7 @@
             <div class='signup-dot-container'>
                 <span class="signup-dot"></span>
                 <span class="signup-dot-current"></span>
-                <span class="signup-dot"></span>  
+                <!-- <span class="signup-dot"></span>   -->
             </div>
             <button class='signup-button'>Next</button>
             

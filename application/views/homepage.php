@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/homepage.css">
 
 </head>
 <body>
-
-
 
 <input id="initial-data" value='<?php echo $python; ?>' style="display:none;">
 <input id="favourite_teacher_name" value='<?php echo $popular_teachers; ?>'style="display:none;">
@@ -28,6 +26,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <div class="homepage-whatweoffer">
             <h3 class="homepage-whatweoffer-heading">What we offer</h3>
             <div class="homepage-whatweoffer-container">
@@ -49,6 +48,7 @@
                 </div>
             </div>
         </div>
+-->
         <div class="homepage-mostviewed">
             <div class="homepage-mostviewed-description">
                 <h3>Most viewed</h3>
@@ -60,6 +60,7 @@
                     <ul id="homepage-major-container">
                         <li id="homepage-python" class="current">Python</li>
                         <li id="homepage-java">Java</li>
+                        <li id="homepage-javascript">JavaScript</li>
                         <li id="homepage-web-development">Web development</li>
                         <li id="homepage-data-science">Data Science</li>
                         <li id="homepage-Mybatis">Mybatis</li>
@@ -85,8 +86,8 @@
         <div class="homepage-mostdownload">
             <div class="homepage-mostdownload-description">
                 <h3>Recommended to you</h3>
-            </div>
-            <div class="homepage-mostdownload-itemcontainer">
+            </div>  
+            <div class="homepage-mostdownload-itemcontaine  r">
                 <div class="homepage-mostdownload-eachitem-container">
 
 
@@ -131,7 +132,7 @@
 
         var current_major = "";
         majors.addEventListener("click",function(e){
-            if(['Python','Java','Web development', 'Data Science', 'Mybatis','PHP','CodeIgniter'].includes(e.target.textContent)){
+            if(['Python','Java', 'JavaScript', 'Web development', 'Data Science', 'Mybatis','PHP','CodeIgniter'].includes(e.target.textContent)){
                 current_major = e.target.textContent.toLowerCase().split(" ").join("");
                 for(let i = 0 ;i<majors.children.length; i++){
                     majors.children[i].classList.remove("current");
@@ -142,13 +143,14 @@
                     data:{field:current_major},
                     method:"POST",
                     success:function(response) {
+                        console.log(response);
                         var data = JSON.parse(response)
                         console.log(data);
                         container.innerHTML = `
                         <h3>Expand your career opportunities with ${e.target.textContent}</h3>
                         <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, ${e.target.textContent} is one of the most important skills you can learn. </p>
 
-                        <a href="" class="homepage-mostviewed-btn">
+                        <a href="<?php echo base_url(); ?>Category?Major=${e.target.textContent.split(" ").join("")}" class="homepage-mostviewed-btn">
                                 Explore ${e.target.textContent}
                         </a>
                         `
@@ -159,7 +161,7 @@
                             let item = document.createElement("div");
                             item.classList.add("homepage-mostviewed-item");
                             item.innerHTML = `
-                            <a href="">
+                            <a href="${base_url.value}DetailPage?cid=${data[i].cid}">
                                 <img src="${data[i].course_img_path}" alt="">
                                 <h4>${data[i].course_name}</h4>
                                 <p>${data[i].username}</p>
@@ -180,7 +182,34 @@
         function init(){
             const init = document.querySelector("#initial-data");
             const initialData = JSON.parse(init.value);
-            const container = document.querySelector(".homepage-mostviewed-eachitem-container");
+            // console.log("popular_course:");
+            // console.log(initialData);
+            // const container = document.querySelector(".homepage-mostviewed-eachitem-container");
+            // for(let i = 0; i<initialData.length; i++){
+            //     let item = document.createElement("div");
+            //     item.classList.add("homepage-mostviewed-item");
+            //     item.innerHTML = `
+            //     <a href="${base_url.value}DetailPage?cid=${initialData[i].cid}">
+            //         <img src="${initialData[i].course_img_path}" alt="">
+            //         <h4>${initialData[i].course_name}</h4>
+            //         <p>${initialData[i].username}</p>
+            //         <div class="homepage-mostviewed-rating">
+            //             <p><i class="fab fa-hotjar"></i>${initialData[i].favourite_number}</p>
+            //         </div>
+            //     </a>
+            //     `
+            //     container.appendChild(item);
+            container.innerHTML = `
+            <h3>Expand your career opportunities with Python</h3>
+            <p class="homepage-mostviewed-p">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, Python is one of the most important skills you can learn. </p>
+
+            <a href="<?php echo base_url(); ?>Category?Major=python" class="homepage-mostviewed-btn">
+                    Explore Python
+            </a>
+            `
+            const eachitemcontainer = document.createElement("div");
+            eachitemcontainer.classList.add("homepage-mostviewed-eachitem-container");
+
             for(let i = 0; i<initialData.length; i++){
                 let item = document.createElement("div");
                 item.classList.add("homepage-mostviewed-item");
@@ -194,8 +223,10 @@
                     </div>
                 </a>
                 `
-                container.appendChild(item);
+                eachitemcontainer.appendChild(item);
+                
             }
+            container.appendChild(eachitemcontainer);
         };
         init();
 
@@ -209,11 +240,18 @@
                 teacheritem.innerHTML = `
                 <div class="homepage-teacher-description">
                     <img src="${initialData[i].avatar}" alt="">
-                    <p>Teacher ${initialData[i].username} has</p>
+                    <p>Teacher <a href="<?php echo base_url(); ?>Teacher_profile?username=${initialData[i].username}">${initialData[i].username}</a> has</p>
                 </div>
-                <p class="homepage-teacher-strong">${initialData[i].favourite_number} views</p>
+                <p class="homepage-teacher-strong">${initialData[i].favourite_number} likes</p>
                 `
                 teacherContainer.appendChild(teacheritem);
+                // $.ajax({
+                //     url:`<?php echo base_url(); ?>My_profile/teacher_profile?username=${initialData[i].username}`,
+                //     method:"POST",
+                //     // success:function(response) {
+                //     //     alert("Successfully added!")
+                //     // }
+                // })
             }
         }
         favouriteTeacher();
@@ -227,7 +265,7 @@
                 let courseitem = document.createElement("div");
                 courseitem.classList.add("homepage-mostdownload-item")
                 courseitem.innerHTML = `
-                <a href="">
+                <a href="${base_url.value}DetailPage?cid=${initialData[i].course_id}">
                     <img src="${initialData[i].course_img_path}" alt="">
                     <h4>${initialData[i].course_name}</h4>
                     <p>${initialData[i].username}</p>
@@ -240,10 +278,6 @@
             }
         }
         favouriteCourse();
-
-
-
-
 
     </script>
 </html>

@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/lecture.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 <input id="lec_docs" value='<?php echo $docs; ?>' style="display:none;">
 <input id="lec_video" value='<?php echo $videos; ?>'style="display:none;">
@@ -10,7 +10,7 @@
 
         <h1>Teacher</h1>
         <img class="lec_avatar" src="<?php echo base_url() ?>/assets/img/img_avatar.png">
-        <h2>David</h2>
+        <h2><?php echo $author; ?></h2>
 
         <hr class="lec_split">
 
@@ -33,8 +33,7 @@
         <div class="lec_select">
             <h1 class="lec_video">Lecture Videos</h1>
             <h1 class="lec_pdf">Lecture Slides</h1>
-            <h1 class="lec_feedback">Feedbacks</h1>
-            <h1 class="lec_qa">Question&Answer</h1>
+
         </div>
         <div class="lec_row_container">
 

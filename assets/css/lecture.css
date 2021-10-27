@@ -6,6 +6,7 @@
 
 .lec_container {
     display: flex;
+    height: auto;
 }
 
 .lec_left {
@@ -14,7 +15,7 @@
     align-items: center;
     text-align: center;
     width: 25vw;
-    height: 120vh;
+    min-height: 120vh;
 }
 
 .lec_left h1 {

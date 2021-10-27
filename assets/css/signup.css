@@ -81,11 +81,11 @@ hr{
     color: black;
 }
 
-input[type=text],input[type=password], input[type=email]{
+/* input[type=text],input[type=password], input[type=email]{
     padding: 1em;
     color: black;
 
-} 
+}  */
 
 .signup-input-text, .signup-options{
     border: none;
@@ -154,6 +154,7 @@ input[type=text],input[type=password], input[type=email]{
     background-color: rgb(204, 204, 204);
     border-radius: 10px;
     opacity: 0.5;
+    padding: 0 1em;
 }
 
 .signup-input-text-right{

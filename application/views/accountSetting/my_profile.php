@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>My profile</title>
     <script src="https://kit.fontawesome.com/cc3e753279.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/AccountSetting.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/MyProfile.css">
@@ -139,8 +140,8 @@
             <p>Institution</p>
             <select id="MyProfile-Institution">
                 <option value="University of Queensland">University of Queensland</option>
-                <option value="Griffith">Griffith</option>
-                <option value="QUT">Queensland university of technology</option>
+                <option value="Griffith university">Griffith</option>
+                <option value="Queensland university of technology">Queensland university of technology</option>
                 <option value="Bond University">Bond University</option>
             </select>
             `
@@ -149,7 +150,6 @@
             <select id="MyProfile-Major">
                 <option value="Information Tec">Information Tec</option>
                 <option value="Interaction Design">Interaction Design</option>
-
             </select>
             `
             gender.innerHTML = `

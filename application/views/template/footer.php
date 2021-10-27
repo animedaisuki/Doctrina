@@ -16,9 +16,9 @@
 						<li>Chicheng Xu</li>
 					</ul>
 					<ul>
-						<li>Peiying Liu</li>
+						<li>Pei-Ying Liu</li>
 						<li>Tingwen Tan</li>
-						<li><a href="">References</a></li>
+						<li><a href="<?php echo base_url(); ?>reference">References</a></li>
 					</ul>
 				</div>
 				<div class="logo-img">

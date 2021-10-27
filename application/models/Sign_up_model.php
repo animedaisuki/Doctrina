@@ -1,7 +1,7 @@
 <?php
     class Sign_up_model extends CI_Model {
         
-        public function register($enc_password, $first_name, $last_name, $email, $username, $institution, $picture) {
+        public function register($enc_password, $first_name, $last_name, $email, $username, $institution, $major, $gender, $picture) {
             $data = array(
                 'fname' => $first_name,
                 'lname' => $last_name,
@@ -9,7 +9,10 @@
                 'username' => $username,
                 'password' => $enc_password,
                 'institution' => $institution,
-                'user_picture_path' => $picture
+                'user_picture_path' => $picture,
+                'gender' => $gender,
+                'Major' => $major,
+                'email_verified' => '1'
             );
 			return $this->db->insert('user', $data);
         }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create course</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/createNewCourse.css">
 </head>
 <body>
@@ -24,6 +24,7 @@
                   <option value="python" selected>Python</option>
                   <option value="java">Java</option>
                   <option value="webdevelopment">Web Development</option>
+                  <option value="javascript">JavaScript</option>
                   <option value="datascience">Data Science</option>
                   <option value="mybatis">Mybatis</option>
                   <option value="php">PHP</option>
@@ -31,7 +32,7 @@
                   <option value="" disabled>Art</option>
                   <option value="sketch">Sketch</option>
                   <option value="painting">Painting</option>
-                  <option value="sculpture">Sculpture/option>
+                  <option value="sculpture">Sculpture</option>
                 </select>
             </div>
             <div class="createNewCourse-intro">

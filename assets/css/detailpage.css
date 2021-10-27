@@ -6,6 +6,7 @@
 .detailpage-container {
   margin: 0 auto;
   width: 90%;
+  min-height: 1200px;
 }
 .detailpage-header {
   background-color: rgb(32, 32, 32);
@@ -25,6 +26,10 @@
 }
 .detailpage-description .detailpage-small i {
   margin-right: 5px;
+}
+
+.detailpage-description a{
+  color: red;
 }
 .detailpage-img {
   width: 30%;
@@ -101,7 +106,7 @@
 .detailpage-itemdescription-container p {
   line-height: 30px;
   font-size: 15px;
-  height: 300px;
+  height: 150px;
   overflow:hidden;
 }
 .detailpage-showmore-btn {

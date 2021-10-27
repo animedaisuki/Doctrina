@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * The code below has been adapted from codexworld.
+* Specifically, this code is sourced from the [https://www.codexworld.com/login-with-google-account-in-codeigniter] example.
+* [we add recaptcha for login]
+*/
+
 /*
 | -------------------------------------------------------------------
 |  Google API Configuration
@@ -18,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['google']['client_id']        = '860586644820-akn464l9vad9vik42h8qic441k35tbte.apps.googleusercontent.com';
 $config['google']['client_secret']    = '03ewwilFl2Bo7q8YUG6oIl2G';
-$config['google']['redirect_uri']     = 'https://localhost/demo/login';
+$config['google']['redirect_uri']     = 'https://2bnumberone.uqcloud.net/demo/login';
 $config['google']['application_name'] = 'Cardinal';
 $config['google']['api_key']          = '';
 $config['google']['scopes']           = array();

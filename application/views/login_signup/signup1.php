@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup 1</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/signup.css">
-    <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script> -->
     <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -50,7 +50,7 @@
         <div class='signup-dot-container'>
             <span class="signup-dot-current"></span>
             <span class="signup-dot"></span>
-            <span class="signup-dot"></span>  
+            <!-- <span class="signup-dot"></span>   -->
         </div>
         
         <button class='signup-button'>Next</button>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset Password</title>
     <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/password.css">
-    <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script> -->
     <script src="https://kit.fontawesome.com/6233a8b1d1.js" crossorigin="anonymous"></script>
 
 </head>

@@ -12,7 +12,7 @@
 .about_us_container {
     text-align: center;
     padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 1vh;
     color: #ff9535;
     margin: 0 auto;
     max-width: 1200px;
@@ -49,7 +49,7 @@
 }
 
 .about_us_value {
-    padding-top: 5vh;
+    padding-top: 1vh;
     padding-bottom: 5vh;
     margin: 0 auto;
     max-width:1200px;
@@ -71,7 +71,7 @@
 
 .about_us_p1 {
     color: black;
-    text-align: left;
+    text-align: justify;
     padding-top: 10px;
     max-height: 10vh;
 }

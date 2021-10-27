@@ -60,7 +60,8 @@ class Utils_model extends CI_Model {
                 FROM user u, upload_list ul,favorite_list fl 
                 where u.id = ul.author_id AND ul.course_id = fl.course_id 
                 GROUP BY u.id
-                ORDER BY favourite_number DESC";
+                ORDER BY favourite_number DESC
+                Limit 5";
         $result = $this->db->query($sql);
         return $result->result_array();
     }

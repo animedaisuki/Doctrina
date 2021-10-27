@@ -153,7 +153,7 @@
         let course = document.createElement("a");
         let id = parseInt(json[i].cid);
         course.classList.add("major_images");
-        course.href = `DetailPage?cid=${id}`
+        course.href = `<?php echo base_url();?>DetailPage?cid=${id}`
         course.innerHTML =
         `
             <img src="${json[i].course_img_path}" alt="major image">

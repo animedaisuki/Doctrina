@@ -18,6 +18,11 @@ class Login extends CI_Controller{
 
         if(isset($_GET['code'])){
 
+        /**
+        * The code below has been adapted from codexworld.
+        * Specifically, this code is sourced from the [https://www.codexworld.com/login-with-google-account-in-codeigniter] example.
+        * [we add recaptcha for login]
+        */
             // Authenticate user with google
             if($this->google->getAuthenticate()){
 
@@ -25,7 +30,7 @@ class Login extends CI_Controller{
                 $gpInfo = $this->google->getUserInfo();
                 // Preparing data for database insertion
                 $userData['oauth_provider'] = 'google';
-                $userData['oauth_uid']         = 'G-'.$gpInfo['given_name'];
+                $userData['oauth_uid']         = explode("@",$gpInfo['email'])[0];
                 $userData['first_name']     = $gpInfo['given_name'];
                 $userData['last_name']         = $gpInfo['family_name'];
                 $userData['email']             = $gpInfo['email'];
@@ -106,7 +111,15 @@ class Login extends CI_Controller{
         }
     }
 
+    /**
+    * The code below has been adapted from reCAPTCHA supplied by Google.
+    * Specifically, this code is sourced from the [https://www.google.com/recaptcha/about/] example.
+    */
 
+    /**
+    * The code below has been adapted from reCAPTCHA example supplied by webeasystep.
+    * Specifically, this code is sourced from the [https://webeasystep.com/blog/view_article/integrate_recaptcha_with_codeigniter_validation] example.
+    */
     function validate_captcha() {
         //from https://webeasystep.com/blog/view_article/integrate_recaptcha_with_codeigniter_validation
         $recaptcha = trim($this->input->post('g-recaptcha-response'));

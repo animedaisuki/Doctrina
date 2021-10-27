@@ -21,7 +21,7 @@ class User_Profile extends CI_Model {
 	}
 
 	public function token_expired($token) {
-		$sql = "SELECT token FROM token WHERE token = '$token'";
+		$sql = "SELECT token FROM email_token WHERE token = '$token'";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return false;

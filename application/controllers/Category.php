@@ -12,7 +12,17 @@ class Category extends CI_Controller {
             unset($data['courses'][$key]['course_id']);
         }
         $data['courses'] = json_encode($data['courses']);
-        $data['field'] = $major;
+        $captital = ucfirst($major);
+
+        if ($captital == 'Datascience') {
+            $data['field'] = 'Data science';
+        } else if ($captital == 'Webdevelopment') {
+            $data['field'] = 'Web development';
+        } else {
+            $data['field'] = $captital;
+        }
+
+
         $this->load->view('template/navbar');
         $this->load->view('category.php',$data);
         $this->load->view('template/footer');

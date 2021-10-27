@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Week 2 Workshop Example</title>
+    <title>Account setting</title>
     <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/AccountSetting.css">
     <script src="https://kit.fontawesome.com/cc3e753279.js" crossorigin="anonymous"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script>
@@ -51,9 +51,9 @@
                         <div class="AccountSetting-img-container">
                             <img class="AccountSetting-img2" src="<?php echo base_url()?>assets/img/email.png" alt="logo">
                             <div class="AccountSetting-text-container AccountSetting-verify-email">
-                                <p>Email not verified!</p>
+                                <p>Change Email</p>
                                 <input id="AccountSetting-newEmail" placeholder="Please enter your email address">
-                                <button type="button" class="AccountSetting-resend-button" >Verify</button>
+                                <button type="button" class="AccountSetting-resend-button" >Send</button>
 								<div id="AccountSetting-Email-feedback"><i class="far fa-check-circle"></i>Success</div>
                             </div>
                         </div>

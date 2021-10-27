@@ -21,6 +21,15 @@ a {
   align-items: center;
   border-bottom: 2px solid white;
 }
+
+.navbar-searchbar-container input ::placeholder {
+  color: rgb(175, 175, 175);
+}
+
+.navbar-searchbar-container input {
+  background-color: white;
+}
+
 .navbar-navbar-container a:hover {
   border-bottom: 2px solid #c81c1c;
 }
@@ -89,6 +98,11 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.navbar-searchbar-container form{
+  width: 100%;
+}
+
 .navbar-searchbar-container input {
   width: 100%;
   border-radius: 10px;
@@ -223,4 +237,3 @@ a {
 .navbar-drop-down-profile .login-logout:hover{
   border-bottom:none;
 }
-
