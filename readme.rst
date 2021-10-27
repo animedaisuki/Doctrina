@@ -19,12 +19,15 @@ Testing account password: DavidGuo
 
 (If you try to log in with this account in your localhost or other remote server, it may not work except you set up our database we provided above)
 
-
-
 1.How to Watch video/document
- Click course img or card you want to watch -> start learning -> click view icon
+1.How to Create A New Course and Upload Your Teaching Resource
 
-2.How to Create A New Course and Upload Your Teaching Resource
+(Note: for document file, the format must be PDF; for video file, the format must be MP4)
+
+login->create new course -> drag your file to each week’s drop zone (right side for documents, left side for videos)
+
+2.How to Watch video/document
+ Click course img or card you want to watch -> start learning -> click view icon
 
 3.Login/Sign Up
   Click login/signUp(at right top of the view port)
