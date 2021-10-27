@@ -19,7 +19,9 @@ Testing account password: DavidGuo
 
 (If you try to log in with this account in your localhost or other remote server, it may not work except you set up our database we provided above)
 
+
 1.How to Watch video/document
+
 1.How to Create A New Course and Upload Your Teaching Resource
 
 (Note: for document file, the format must be PDF; for video file, the format must be MP4)
